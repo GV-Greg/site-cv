@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Greg's CV</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <title>Gregory Van den Bergh - Webdevelopper fullstack - Belgique</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
@@ -13,25 +14,209 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide slide1">
                 <div id="container-logo">
-                    <img id="logo" src="./images/logo.png" alt="logo">
+                    <img id="logo" src="./images/logo-color.png" alt="logo">
                 </div>
                 <div id="identite">
-                    <h1>Gregory VAN DEN BERGH</h1>
+                    <h1>
+                        <div id="prenom">Gregory</div>
+                        <div id="nom">VAN DEN BERGH</div>
+                    </h1>
+                </div>
+                <div class="slide-main">
+                    <div id="fonctions-container">
+                        <div id="titre">Webdeveloppper</div>
+                        <div id="fonctions">
+                        <span>
+                            frontend<br />
+                            backend<br />
+                            fullstack<br />
+                        </span>
+                        </div>
+                    </div>
+                    <div id="technos-container">
+                        <div class="techno-item"><ion-icon size="small" name="logo-laravel" class="ion-icon"></ion-icon></span> Laravel <span class="bullet"> &bullet; </span></div>
+                        <div class="techno-item"><ion-icon size="small" name="logo-vue" class="ion-icon"></ion-icon> VueJs <span class="bullet"> &bullet; </span></div>
+                        <div class="techno-item"><span class="mdi mdi-tailwind"></span> TailwindCss <span class="bullet"> &bullet; </span></div>
+                        <div class="techno-item">...</div>
+                    </div>
+                    <div id="res-soc-container">
+                        <a class="reseau-social" href="https://www.linkedin.com/in/greggv-creacube/" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-linkedin" size="middle" class="icon middle"></ion-icon>
+                            <ion-icon name="logo-linkedin" size="large" class="icon large"></ion-icon>
+                            <span class="hexagone"></span>
+                        </a>
+                        <a class="reseau-social" href="https://github.com/GV-Greg" target="_blank" rel="noopener noreferrer">
+                            <ion-icon name="logo-github" size="middle" class="icon middle"></ion-icon>
+                            <ion-icon name="logo-github" size="large" class="icon large"></ion-icon>
+                            <span class="hexagone"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide slide2">
-                <h1>Page 2</h1>
+                <h1>
+                    &Agrave; propos
+                </h1>
+                <div class="slide-main">
+                    <div id="description">
+                        <p>Depuis mes études en infographie, j'ai développé un intérêt pour le web, les nouvelles technologies et l'image.
+                            Ce qui m'a conduit à obtenir un diplôme de photographe et ensuite, plus récemment, d'un brevet de développeur web en 2020.
+                            J'ai pu consolider mes connaissances en formant aux bases de la programmation et transmettre mes connaissances durant 3 ans comme formateur informatique dans une asbl.
+                            J'aime découvrir et apprendre de nouveaux langages, frameworks ou encore utiliser de nouvelles librairies.
+                            Ma capacité d'analyse me permet de proposer des solutions fonctionnelles en backend et d’adapter l’expérience utilisateur en frontend.</p>
+                    </div>
+                    <div id="technologies-mobile">
+                        <div class="hexagone hexagone-orange">
+                            <div class="badge">
+                                <ion-icon size="middle" name="logo-html5" class="ion-icon middle"></ion-icon>
+                                <ion-icon size="large" name="logo-html5" class="ion-icon large"></ion-icon>
+                            </div>
+                            <div class="ribbon">HTML</div>
+                        </div>
+                        <div class="hexagone hexagone-blue">
+                            <div class="badge">
+                                <ion-icon size="middle" name="logo-css3" class="ion-icon middle"></ion-icon>
+                                <ion-icon size="large" name="logo-css3" class="ion-icon large"></ion-icon>
+                            </div>
+                            <div class="ribbon">CSS</div>
+                        </div>
+                        <div class="hexagone hexagone-yellow">
+                            <div class="badge">
+                                <ion-icon size="middle" name="logo-javascript" class="ion-icon middle"></ion-icon>
+                                <ion-icon size="large" name="logo-javascript" class="ion-icon large"></ion-icon>
+                            </div>
+                            <div class="ribbon">Javascript</div>
+                        </div>
+                        <div class="hexagone hexagone-blue">
+                            <div class="badge"><span class="mdi mdi-language-php"></span></div>
+                            <div class="ribbon">PHP</div>
+                        </div>
+                        <div class="hexagone hexagone-blue">
+                            <div class="badge">
+                                <ion-icon size="middle" name="server" class="ion-icon middle"></ion-icon>
+                                <ion-icon size="large" name="server" class="ion-icon large"></ion-icon>
+                            </div>
+                            <div class="ribbon">SQL/MySQL</div>
+                        </div>
+                        <div class="hexagone hexagone-teal">
+                            <div class="badge"><span class="mdi mdi-tailwind"></span></div>
+                            <div class="ribbon">Tailwind</div>
+                        </div>
+                        <div class="hexagone hexagone-purple">
+                            <div class="badge"><span class="mdi mdi-bootstrap"></span></div>
+                            <div class="ribbon">Bootstrap</div>
+                        </div>
+                        <div class="hexagone hexagone-teal">
+                            <div class="badge">
+                                <ion-icon size="middle" name="logo-vue" class="ion-icon middle"></ion-icon>
+                                <ion-icon size="large" name="logo-vue" class="ion-icon large"></ion-icon>
+                            </div>
+                            <div class="ribbon">VueJs</div>
+                        </div>
+                        <div class="hexagone hexagone-blue">
+                            <div class="badge">
+                                <ion-icon size="middle" name="logo-react" class="ion-icon middle"></ion-icon>
+                                <ion-icon size="large" name="logo-react" class="ion-icon large"></ion-icon>
+                            </div>
+                            <div class="ribbon">ReactJs</div>
+                        </div>
+                        <div class="hexagone hexagone-red">
+                            <div class="badge">
+                                <ion-icon size="middle" name="logo-laravel" class="ion-icon middle"></ion-icon>
+                                <ion-icon size="large" name="logo-laravel" class="ion-icon large"></ion-icon>
+                            </div>
+                            <div class="ribbon">Laravel</div>
+                        </div>
+                        <div class="hexagone hexagone-purple">
+                            <div class="badge"><span class="mdi mdi-laptop"></span></div>
+                            <div class="ribbon">PhpStorm</div>
+                        </div>
+                        <div class="hexagone hexagone-blue">
+                            <div class="badge"><span class="mdi mdi-image"></span></div>
+                            <div class="ribbon">Photoshop</div>
+                        </div>
+                    </div>
+                    <div id="technologies">
+                        <div class="techno">HTML/CSS <div class="techno-type">Langage</div></div>
+                        <div class="techno">Javascript <div class="techno-type">Langage</div></div>
+                        <div class="techno">PHP <div class="techno-type">Langage</div></div>
+                        <div class="techno">SQL <div class="techno-type">Langage</div></div>
+                        <div class="techno">Tailwind <div class="techno-type">CSS</div></div>
+                        <div class="techno">Bootstrap <div class="techno-type">CSS</div></div>
+                        <div class="techno">Vue.js<div class="techno-type">Framework</div></div>
+                        <div class="techno">React.js<div class="techno-type">Framework</div></div>
+                        <div class="techno">Laravel<div class="techno-type">Framework</div></div>
+                        <div class="techno">MySQL<div class="techno-type">SGBD</div></div>
+                        <div class="techno">PhpStorm<div class="techno-type">IDE</div></div>
+                        <div class="techno">Photoshop<div class="techno-type">Programme</div></div>
+                    </div>
+                    <div id="cv">
+                        <button id="btn-cv" class="btn" type="button" onclick="DownloadFile('CV_Gregory Van den Bergh.pdf')">
+                            <div id="button-icon">
+                                <ion-icon name="arrow-down-circle" size="large" class="icon"></ion-icon>
+                            </div>
+                            <div id="button-text">T&eacute;l&eacute;charger <span id="cv-text">CV</span></div>
+                        </button>
+                    </div>
+                </div>
             </div>
             <div class="swiper-slide slide3">
-                <h1>Page 3</h1>
+                <h1>
+                    Portfolio
+                </h1>
+                <div class="slide-main">
+                    <div id="projets-container">
+                        <div class="projet-row">
+                            <a class="link projet-blue" href="https://evolutic2020.interface3namur.be/" target="_blank" rel="noopener noreferrer">
+                                <div>Evolu'TIC 2020</div>
+                            </a>
+                            <a class="link projet-teal" href="https://officedescoffres.creacube.be/" target="_blank" rel="noopener noreferrer">
+                                <div>Office des coffres</div>
+                            </a>
+
+                            <!--                        <a class="projet" href="https://github.com/GV-Greg/BugCube" target="_blank" rel="noopener noreferrer">BugCube</a>-->
+                            <!--                        <a class="projet" href="https://evolutic2020.interface3namur.be/" target="_blank" rel="noopener noreferrer">ERP Interface3.Namur</a>-->
+                        </div>
+                        <div class="projet-row">
+                            <a class="link projet-yellow" href="https://www.karaofus.creacube.be/" target="_blank" rel="noopener noreferrer">
+                                <div>KaraoFus</div>
+                            </a>
+                            <a class="link projet-orange" href="https://gv-greg.github.io/GameCode/" target="_blank" rel="noopener noreferrer">
+                                <div>GameCode</div>
+                            </a>
+                            <div class="projet-silver"><div>A venir</div></div>
+                        </div>
+                        <div class="projet-row">
+                            <div class="projet-silver"><div>A venir</div></div>
+                            <div class="projet-silver"><div>A venir</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide4">
+                <h1>
+                    <div id="contact_icon"><img src="./images/icon-contact.png" alt="icone contact"></div>
+                    <div id="contact_text">Contact</div>
+                </h1>
+                <div class="slide-main">
+                    <div id="infos-container">
+                        <div class="info"><span class="mdi mdi-map-marker icon"></span>Namur - Belgique</div>
+                        <div class="info"><span class="mdi mdi-email icon"></span>gregvandenbergh@gmail.com</div>
+                    </div>
+                    <div id="contact">
+                        <a href="mailto:gregvandenbergh@gmail.com" id="btn-contact" class="link btn">Me contacter</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next swiper-button-white"></div>
         <div class="swiper-button-prev swiper-button-white"></div>
     </div>
-
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/pdf.js"></script>
 </body>
 </html>

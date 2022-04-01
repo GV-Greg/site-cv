@@ -1,6 +1,8 @@
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
+    // Optional parameters
     effect: 'cube',
-    grabCursor: true,
+    grabCursor:true,
+    loop:true,
 
     // Option parameters for cube
     cubeEffect: {
@@ -11,6 +13,7 @@ const swiper = new Swiper('.swiper', {
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
+        clickable: true,
     },
 
     // Navigation arrows

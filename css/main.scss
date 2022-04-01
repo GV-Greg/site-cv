@@ -1,173 +1,1695 @@
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
-$desktop: "(min-width: 1024px)";
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin phone-portrait {
+  @media only screen and (max-width: 425px) and (min-height: 600px) and (orientation: portrait) { @content; }
+}
+@mixin phone-portrait-mini {
+  @media only screen and (max-width: 300px) and (min-height: 600px) and (orientation: portrait) { @content; }
+}
+@mixin phone-portrait-max {
+  @media only screen and (max-width: 425px) and (min-height: 800px) and (orientation: portrait) { @content; }
+}
+@mixin phone-landscape {
+  @media only screen and (min-width: 350px) and (max-height: 425px)  and (orientation: landscape) { @content; }
+}
+@mixin phone-landscape-mini {
+  @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) { @content; }
+}
+@mixin tablet-portrait {
+  @media only screen and (min-width: 768px) and (orientation: portrait) { @content; }
+}
+@mixin tablet-landscape {
+  @media only screen and (min-width: 1000px) and (orientation: landscape) { @content; }
+}
+@mixin desktop {
+  @media only screen and (min-width: 1200px) { @content; }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+@mixin margin-auto {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+$hex_1: 4rem;
+$hex_2: 5rem;
+$hex_3: 6rem;
+$hex_4: 9rem;
+$hex_5: 10rem;
+$multi_portrait: 0.3;
+$multi_landscape: 0.3;
+$gutter_portrait: 0.3rem;
+$gutter_landscape: 0.2rem;
+$gutter: 0.5rem;
+
+@mixin projet($size, $multi, $gutter, $color) {
+  cursor: pointer;
+  div {
+    width: $size;
+    height: ($size * 0.577);
+    background: $color;
+    margin: ($size * $multi) 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.80;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: 0;
+      border-left: calc($size / 2) solid transparent;
+      border-right: calc($size / 2) solid transparent;
+    }
+    &:before {
+      bottom: 100%;
+      border-bottom: ($size * 0.288) solid $color;
+    }
+    &:after {
+      top: 100%;
+      border-top: ($size * 0.288) solid $color;
+    }
+  }
+}
+
+@mixin projet_desktop($size, $gutter, $color) {
+  cursor: pointer;
+  div {
+    width: $size;
+    height: ($size * 0.577);
+    background: $color;
+    margin: ($size * 0.3) $gutter;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    opacity: 0.50;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      left: 0;
+      border-left: calc($size / 2) solid transparent;
+      border-right: calc($size / 2) solid transparent;
+    }
+    &:before {
+      bottom: 100%;
+      border-bottom: ($size * 0.288) solid $color;
+    }
+    &:after {
+      top: 100%;
+      border-top: ($size * 0.288) solid $color;
+    }
+  }
+  &:hover div {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+$gradient-gold: linear-gradient(to bottom right, #e6ce6a 0%, #b7892b 100%);
+$gradient-yellow: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
+$gradient-orange: linear-gradient(to bottom right, #ffc107 0%, #f57c00 100%);
+$gradient-pink: linear-gradient(to bottom right, #F48FB1 0%, #d81b60 100%);
+$gradient-red: linear-gradient(to bottom right, #f4511e 0%, #b71c1c 100%);
+$gradient-purple: linear-gradient(to bottom right, #ab47bc 0%, #4527a0 100%);
+$gradient-teal: linear-gradient(to bottom right, #4DB6AC 0%, #00796B 100%);
+$gradient-blue: linear-gradient(to bottom right, #4FC3F7 0%, #2196F3 100%);
+$gradient-apple: linear-gradient(to bottom right, #cddc39 0%, #8bc34a 100%);
+$gradient-green: linear-gradient(to bottom right, #4CAF50 0%, #1B5E20 100%);
+$gradient-silver: linear-gradient(to bottom right, #E0E0E0 0%, #BDBDBD 100%);
+
+$color-gold: #b7892b;
+$color-yellow: #ffb300;
+$color-orange: #f68401;
+$color-pink: #dc306f;
+$color-red: #c62828;
+$color-purple: #7127a8;
+$color-teal: #34a297;
+$color-blue: #259af3;
+$color-apple:#7cb342;
+$color-green: #00944a;
+$color-silver: #9e9e9e;
+$color-dark: #0d2e57;
 
 html, body {
   position: relative;
   height: 100%;
-  background: #0d2e57;
 }
 
 body {
   margin: 0;
   padding: 0;
+  color: $color-dark;
 }
 
 .swiper {
   width: 100%;
   height: 100%;
+  background: $color-dark;
+}
+
+.swiper-wrapper {
+  background: rgb(117, 212, 218);
+  background: -moz-linear-gradient(180deg, rgba(117, 212, 218) 0%, rgb(190, 239, 237) 75%);
+  background: -webkit-linear-gradient(180deg, rgba(117, 212, 218, 1) 0%, rgba(190, 239, 237, 1) 75%);
+  background: linear-gradient(180deg, rgba(117, 212, 218, 1) 0%, rgba(190, 239, 237, 1) 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#75d4da",endColorstr="#beefed",GradientType=1);
 }
 
 .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-size: cover;
   box-sizing: border-box;
-  color: #fff;
   padding: 1em 1em;
+  background: rgb(117, 212, 218);
+  background: -moz-linear-gradient(180deg, rgba(117, 212, 218) 0%, rgb(190, 239, 237) 75%);
+  background: -webkit-linear-gradient(180deg, rgba(117, 212, 218, 1) 0%, rgba(190, 239, 237, 1) 75%);
+  background: linear-gradient(180deg, rgba(117, 212, 218, 1) 0%, rgba(190, 239, 237, 1) 75%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#75d4da",endColorstr="#beefed",GradientType=1);
   h1 {
-    font-size: 5em;
-    line-height: 1em;
-    &:before {
-      content: ' ';
-      position: absolute;
-      top: 12em;
-      width: 90%;
-      height: 10%;
-      border-top: 1px solid #fff;
-      border-bottom: 1px solid #fff;
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: flex-end;
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'Fredoka One', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    letter-spacing: .15em;
+    text-rendering: optimizeLegibility;
+    text-shadow: -1px -1px 1px,
+                  0px 1px 0 #1b4170,
+                  0px 2px 0 #143967,
+                  1px 3px 0 #0e2f59,
+                  1px 4px 0 #08264b,
+                  2px 5px 0 #041b38,
+                  2px 2px 5px #0d2e57,
+                  5px 8px 5px rgba(10, 21, 47, 0.3);
+    @include phone-portrait-mini {
+      font-size: 1.5em;
+    }
+    @include phone-landscape {
+      font-size: 1.5em;
+      margin: 0 0 5px 0;
+    }
+    @include phone-landscape-mini {
+      margin: -5px 0 25px 0;
+      font-size: 1.5em;
+    }
+    @include tablet-portrait {
+      font-size: 4em;
+    }
+    @include tablet-landscape {
+      font-size: 3em;
+    }
+    @include desktop {
+      font-size: 4em;
     }
   }
-  @media #{$tablet} {
-    padding: 3em;
-    h1 {
-      &:before {
-        top: 9.2em;
-        width: 72%;
-      }
-    }
+
+  .logo-small {
+    height: 50px;
+    width: 50px;
   }
-  @media #{$desktop} {
-    padding: 3em;
-    h1 {
-      &:before {
-        top: 9.7em;
-        width: 72%;
-      }
-    }
+
+  .logo-middle {
+    height: 100px;
+    width: 100px;
+  }
+
+  .slide-main {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
   }
 }
 
-.slide1{
-  background: rgb(162,179,203);
-  background: -moz-linear-gradient(135deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  background: -webkit-linear-gradient(135deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  background: linear-gradient(135deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a2b3cb",endColorstr="#e0e4eb",GradientType=1);
+.swiper-pagination {
+  transform: translateZ(1px);
+}
+
+.link {
+  text-decoration: none;
+}
+
+.hexagone-gold {
+  background: $gradient-gold;
+  color: $color-gold;
+}
+
+.hexagone-yellow {
+  background: $gradient-yellow;
+  color: $color-yellow;
+}
+
+.hexagone-orange {
+  background: $gradient-orange;
+  color: $color-orange;
+}
+
+.hexagone-pink {
+  background: $gradient-pink;
+  color: $color-pink;
+}
+
+.hexagone-red {
+  background: $gradient-red;
+  color: $color-red;
+}
+
+.hexagone-purple {
+  background: $gradient-purple;
+  color: $color-purple;
+}
+
+.hexagone-teal {
+  background: $gradient-teal;
+  color: $color-teal;
+}
+
+.hexagone-blue {
+  background: $gradient-blue;
+  color: $color-blue;
+}
+
+.hexagone-apple {
+  background: $gradient-apple;
+  color: $color-apple;
+}
+
+.hexagone-green {
+  background: $gradient-green;
+  color: $color-green;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: 0 10px;
+  font-family: "Lato", sans-serif;
+  @include tablet-landscape {
+    padding: 10px 25px;
+    margin: 0 25px;
+  }
+  @include desktop {
+    padding: 10px 25px;
+    margin: 0 25px;
+  }
+}
+
+.slide1 {
+  width: 100%;
+  height: 100%;
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  img {
-    margin-top: 25px;
-    height: 200px;
-    width: 200px
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  @include tablet-portrait {
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
   }
-  #identite {
-    color: #0d2e57;
-    h1 {
-      font-size: 20px;
-    }
+  @include tablet-landscape {
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
   }
-  @media #{$tablet} {
-    img {
-      height: 250px;
-      width: 250px;
-    }
-    #identite {
-      h1 {
-        font-size: 40px;
-      }
-    }
+  @include desktop {
+    justify-content: start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
   }
-  @media #{$desktop} {
-    img {
+  #container-logo {
+    height: 150px;
+    width: 150px;
+    margin-top: 10%;
+    @include phone-landscape {
+      height: 120px;
+      width: 120px;
+      margin-top: 0;
+    }
+    @include phone-landscape-mini {
+      height: 70px;
+      width: 70px;
+      margin-top: -1.5%;
+    }
+    @include tablet-portrait {
       height: 300px;
       width: 300px;
+      margin-top: 5%;
     }
-    #identite {
-      h1 {
-        font-size: 50px;
+    @include tablet-landscape {
+      height: 250px;
+      width: 250px;
+      margin-top: 2.5%;
+    }
+    @include desktop {
+      height: 175px;
+      width: 175px;
+      margin-top: 1.5%;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  #identite {
+    h1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 10% 0;
+      #prenom {
+        font-size: 0.8em;
+        line-height: 1.2em;
+      }
+      #nom {
+        font-size: 0.7em;
+        line-height: 1.2em;
+      }
+      @include phone-portrait-max {
+        #prenom {
+          font-size: 1.2em;
+        }
+        #nom {
+          font-size: 1em;
+        }
+      }
+      @include phone-landscape {
+        margin-top: 5%;
+        #prenom {
+          font-size: 1em;
+        }
+        #nom {
+          font-size: 0.7em;
+        }
+      }
+      @include phone-landscape-mini {
+        margin-top: 0;
+      }
+      @include tablet-portrait {
+        margin-top: 5%;
+        #prenom {
+          font-size: 1em;
+        }
+        #nom {
+          font-size: 0.7em;
+        }
+      }
+      @include tablet-landscape {
+        margin-top: 0.5%;
+        margin-bottom: 0;
+        #prenom {
+          font-size: 1.3em;
+        }
+        #nom {
+          font-size: 1em;
+        }
+      }
+      @include desktop {
+        margin-top: 2.5%;
+        #prenom {
+          font-size: 1.2em;
+        }
+        #nom {
+          font-size: 1em;
+        }
       }
     }
   }
-  h1:before {
-    border-left: 1px solid #fff;
-    right: 0;
+
+  .slide-main {
+    height: 75vh;
+    #fonctions-container {
+      width: 100%;
+      margin-top: 2.5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Lato', sans-serif;
+      font-weight: bolder;
+      font-size: 25px;
+      @include phone-portrait-max {
+        font-size: 35px;
+      }
+      @include phone-landscape {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 20px;
+      }
+      @include phone-landscape-mini {
+        margin-top: -10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 18px;
+      }
+      @include tablet-portrait {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-size: 45px;
+      }
+      @include tablet-landscape {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0;
+        font-size: 40px;
+      }
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 25px;
+        font-size: 50px;
+      }
+
+      #titre {
+        float: left;
+        margin-right: 0.3em;
+      }
+
+      #fonctions {
+        font-weight: bolder;
+        float: left;
+        overflow: hidden;
+        position: relative;
+        height: 30px;
+        margin-top: 2.5%;
+        top: 2.5%;
+        @include phone-portrait-max {
+          margin-top: 0;
+          height: 35px;
+        }
+        @include phone-landscape {
+          margin-top: 0;
+          height: 25px;
+        }
+        @include tablet-portrait {
+          margin-top: 0;
+          height: 60px;
+        }
+        @include tablet-landscape {
+          margin-top: 0;
+          height: 45px;
+        }
+        @include desktop {
+          margin-top: 0;
+          height: 60px;
+        }
+        span {
+          display: block;
+          color: #e74c3c;
+          position: relative;
+          white-space: nowrap;
+          top: 0;
+          left: 0;
+          animation: move 5s infinite 1s;
+          @include phone-portrait-max {
+            animation: movePhonePortraitMax 5s infinite 1s;
+          }
+          @include phone-landscape {
+            display: inline-block;
+            animation: movePhoneLandscape 5s infinite 1s;
+          }
+          @include phone-landscape-mini {
+            display: inline-block;
+            animation: movePhoneLandscapeGalaxy 5s infinite 1s;
+          }
+          @include tablet-portrait {
+            display: inline-block;
+            animation: moveTabletPortrait 5s infinite 1s;
+          }
+          @include tablet-landscape {
+            display: inline-block;
+            animation: moveTabletLandscape 5s infinite 1s;
+          }
+          @include desktop {
+            display: inline-block;
+            animation: moveDesktop 5s infinite 1s;
+          }
+        }
+        @keyframes move{
+          0%  { top: 0; }
+          33% { top: -30px; }
+          66% { top: -60px; }
+          100% { top: 0; }
+        }
+        @keyframes movePhonePortraitMax{
+          0%  { top: 0; }
+          33% { top: -43px; }
+          66% { top: -86px; }
+          100% { top: 0; }
+        }
+        @keyframes movePhoneLandscape{
+          0%  { top: 0; }
+          33% { top: -24px; }
+          66% { top: -48px; }
+          100% { top: 0; }
+        }
+        @keyframes movePhoneLandscapeGalaxy{
+          0%  { top: 0; }
+          33% { top: -21px; }
+          66% { top: -42px; }
+          100% { top: 0; }
+        }
+        @keyframes moveTabletPortrait{
+          0%  { top: 0; }
+          33% { top: -54px; }
+          66% { top: -108px; }
+          100% { top: 0; }
+        }
+        @keyframes moveTabletLandscape{
+          0%  { top: 0; }
+          33% { top: -48px; }
+          66% { top: -96px; }
+          100% { top: 0; }
+        }
+        @keyframes moveDesktop{
+          0%  { top: 0; }
+          33% { top: -60px; }
+          66% { top: -120px; }
+          100% { top: 0; }
+        }
+      }
+    }
+
+    #technos-container {
+      margin: 25px 0 25px 50px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 20px;
+      .techno-item {
+        display: flex;
+        align-items: center;
+        margin: 0 1px;
+        .ion-icon {
+          margin: 0 3px;
+        }
+        .mdi {
+          margin: 0 2px;
+        }
+        .bullet {
+          margin: 0 17px;
+          display: none;
+        }
+      }
+      .techno-item:last-child {
+        display: none;
+      }
+      @include phone-portrait-max {
+        margin: 25px 0 25px 80px;
+        font-size: 22px;
+      }
+      @include phone-landscape {
+        margin: 10px 0;
+        flex-direction: row;
+        font-size: 15px;
+        .techno-item {
+          display: flex;
+          align-items: center;
+          .ion-icon, .mdi {
+            margin: 0 3px;
+          }
+          .bullet {
+            margin: 0 5px;
+            display: inline-block;
+          }
+        }
+        .techno-item:last-child {
+          display: inline-block;
+        }
+      }
+      @include phone-landscape-mini {
+        margin: 10px 0;
+        flex-direction: row;
+        font-size: 12px;
+        .techno-item {
+          .bullet {
+            margin: 0 2px;
+            display: inline-block;
+          }
+        }
+        .techno-item:last-child {
+          display: inline-block;
+        }
+      }
+      @include tablet-portrait {
+        margin: 0 0 25px 0;
+        flex-direction: row;
+        font-size: 25px;
+        .techno-item {
+          display: flex;
+          align-items: center;
+          .ion-icon, .mdi {
+            margin: 0 3px 0 0;
+          }
+          .bullet {
+            margin: 0 5px;
+            display: inline-block;
+          }
+        }
+        .techno-item:last-child {
+          display: inline-block;
+        }
+      }
+      @include tablet-landscape {
+        margin: 10px 0;
+        flex-direction: row;
+        font-size: 20px;
+        .techno-item {
+          .bullet {
+            margin: 0 2px;
+            display: inline-block;
+          }
+        }
+        .techno-item:last-child {
+          display: inline-block;
+        }
+      }
+      @include desktop {
+        margin-top: 15px;
+        flex-direction: row;
+        font-size: 23px;
+        .techno-item {
+          .bullet {
+            margin: 0 2px;
+            display: inline-block;
+          }
+        }
+        .techno-item:last-child {
+          display: inline-block;
+        }
+      }
+    }
+
+    #res-soc-container {
+      display: flex;
+      justify-content: center;
+      margin: 0 0 50px 0;
+      .reseau-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 15px;
+        cursor: pointer;
+        &:hover {
+          .icon {
+            color: #0d2e57;
+          }
+          .hexagone {
+            background: #e74c3c;
+          }
+        }
+        @include phone-portrait {
+          margin: 0 20px;
+        }
+        @include phone-portrait-max {
+          margin: 0 35px;
+        }
+        @include phone-landscape {
+          margin: 0 20px;
+        }
+        @include tablet-portrait {
+          margin: 0 25px;
+        }
+        @include tablet-landscape {
+          margin: 0 30px;
+        }
+        @include desktop {
+          margin: 30px 30px;
+        }
+        .icon {
+          position: absolute;
+          z-index: 10;
+          color: #fff;
+        }
+        .middle {
+          @include phone-portrait {
+            display: none;
+          }
+          @include phone-portrait-max {
+            display: none;
+          }
+          @include phone-landscape {
+            display: none;
+          }
+          @include phone-landscape-mini {
+            display: block;
+          }
+          @include tablet-portrait {
+            display: none;
+          }
+          @include tablet-landscape {
+            display: none;
+          }
+          @include desktop {
+            display: none;
+          }
+        }
+        .large {
+          display: none;
+          @include phone-portrait {
+            display: inline-block;
+          }
+          @include phone-portrait-max {
+            display: inline-block;
+          }
+          @include phone-landscape {
+            display: inline-block;
+          }
+          @include phone-landscape-mini {
+            display: none;
+          }
+          @include tablet-portrait {
+            display: inline-block;
+          }
+          @include tablet-landscape {
+            display: inline-block;
+          }
+          @include desktop {
+            display: inline-block;
+          }
+        }
+        .hexagone {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          width: 1.25em;
+          height: 2.165em;
+          border-radius: 1em/ .3em;
+          background: #0d2e57;
+          z-index: 5;
+          @include phone-portrait {
+            width: 2em;
+            height: 3.5em;
+          }
+          @include phone-portrait-max {
+            width: 2.5em;
+            height: 4.5em;
+          }
+          @include phone-landscape {
+            width: 1.85em;
+            height: 3.2em;
+          }
+          @include phone-landscape-mini {
+            width: 1.25em;
+            height: 2.165em;
+          }
+          @include tablet-portrait {
+            width: 3em;
+            height: 5.2em;
+          }
+          @include tablet-landscape {
+            width: 2em;
+            height: 3.6em;
+          }
+        }
+
+        .hexagone:before, .hexagone:after {
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          border: inherit;
+          border-radius: inherit;
+          background: inherit;
+          z-index: inherit;
+          content: '';
+        }
+        .hexagone:before {
+          transform: rotate(60deg);
+        }
+        .hexagone:after {
+          transform: rotate(-60deg);
+        }
+      }
+    }
+  }
+
+
+}
+
+.slide2 {
+  .slide-main {
+    #description {
+      margin: -5px 3% 0 3%;
+      @include phone-landscape-mini {
+        margin: -30px 2% 10px 2%;
+      }
+      @include desktop {
+        margin: 0 17%;
+      }
+      p {
+        font-size: 12px;
+        text-align: justify;
+        @include phone-portrait-mini {
+          font-size: 12px;
+        }
+        @include phone-portrait-max {
+          font-size: 16px;
+        }
+        @include phone-landscape {
+          font-size: 11px;
+        }
+        @include phone-landscape-mini {
+          font-size: 10px;
+        }
+        @include tablet-portrait {
+          font-size: 22px;
+        }
+        @include tablet-landscape {
+          font-size: 22px;
+        }
+        @include desktop {
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    #technologies-mobile {
+      margin: -5px 5% 0 5%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 5px;
+      row-gap: 0;
+      justify-content: center;
+      @include phone-portrait-mini {
+        grid-gap: 5px;
+      }
+      @include phone-portrait {
+        margin-bottom: 7.5%;
+      }
+      @include phone-landscape {
+        margin: 0 15%;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 10px;
+        row-gap: 2.5px;
+      }
+      @include phone-landscape-mini {
+        margin: -10px 0 15px 0;
+        grid-template-columns: repeat(12, 1fr);
+        column-gap: 0;
+        row-gap: 0;
+      }
+      @include tablet-portrait {
+        margin: 0 10%;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 10px;
+      }
+      @include tablet-landscape {
+        margin: 1.5% 10%;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 20px;
+        row-gap: 10px;
+      }
+      @include desktop {
+        margin: 5px 20% 0 20%;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 30px;
+        row-gap: 20px;
+      }
+      .hexagone {
+        position: relative;
+        margin: 0.5em 1em;
+        width: 2em;
+        height: 3.1em;
+        border-radius: 10px;
+        display: inline-block;
+        top: 0;
+        &:before,
+        &:after {
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          border-radius: inherit;
+          background: inherit;
+          content: "";
+          @include margin-auto;
+        }
+        &:before {
+          transform: rotate(60deg);
+        }
+        &:after {
+          transform: rotate(-60deg);
+        }
+        @include phone-portrait-mini {
+          width: 1.7em;
+          height: 2.8em;
+        }
+        @include phone-landscape {
+          width: 1.7em;
+          height: 2.8em;
+        }
+        @include phone-landscape-mini {
+          width: 1.2em;
+          height: 1.8em;
+        }
+        @include tablet-portrait {
+          width: 4em;
+          height: 6.2em;
+        }
+        @include tablet-landscape {
+          width: 4em;
+          height: 6.2em;
+        }
+        @include desktop {
+          width: 4em;
+          height: 6.2em;
+        }
+        .badge {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          position: absolute;
+          background: #fff;
+          z-index: 10;
+          border-radius: 50%;
+          @include margin-auto;
+          .ion-icon, .mdi {
+            margin-top: 2px;
+          }
+          .mdi {
+            @include phone-landscape {
+              margin-top: 1px;
+            }
+            @include tablet-portrait {
+              font-size: 30px;
+              margin-top: 7.5px;
+            }
+            @include tablet-landscape {
+              font-size: 30px;
+              margin-top: 7.5px;
+            }
+          }
+          .middle {
+            @include tablet-portrait {
+              display: none;
+            }
+            @include tablet-landscape {
+              display: none;
+            }
+          }
+          .large {
+            display: none;
+            @include tablet-portrait {
+              display: block;
+              margin-top: 5px;
+            }
+            @include tablet-landscape {
+              display: block;
+              margin-top: 5px;
+            }
+          }
+          @include phone-portrait-mini {
+            width: 25px;
+            height: 25px;
+          }
+          @include phone-landscape {
+            width: 25px;
+            height: 25px;
+          }
+          @include phone-landscape-mini {
+            width: 20px;
+            height: 20px;
+          }
+          @include tablet-portrait {
+            width: 60px;
+            height: 60px;
+          }
+          @include tablet-landscape {
+            width: 60px;
+            height: 60px;
+          }
+          @include desktop {
+            width: 60px;
+            height: 60px;
+          }
+        }
+        .ribbon {
+          position: absolute;
+          border-radius: 4px;
+          padding: 2px 0 6px 0;
+          width: 65px;
+          z-index: 11;
+          color: #fff;
+          bottom: 2px;
+          left: 115%;
+          margin-left: -53px;
+          height: 7.5px;
+          font-size: 9px;
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+          font-family: 'Lato', sans-serif;
+          text-transform: uppercase;
+          text-align: center;
+          background: linear-gradient(to bottom right, #555 0%, #333 100%);
+          @include phone-portrait-mini {
+            width: 60px;
+            height: 7.5px;
+            left: 135%;
+          }
+          @include phone-landscape {
+            width: 60px;
+            height: 6px;
+            left: 135%;
+            bottom: 5px;
+            font-size: 8px;
+          }
+          @include phone-landscape-mini {
+            width: 45px;
+            height: 4px;
+            left: 210%;
+            bottom: -5px;
+            font-size: 6px;
+          }
+          @include tablet-portrait {
+            width: 110px;
+            height: 13px;
+            left: 55%;
+            bottom: 19px;
+            margin-left: -57px;
+            font-size: 12px;
+          }
+          @include tablet-landscape {
+            width: 120px;
+            height: 17px;
+            left: 45%;
+            bottom: 19px;
+            margin-left: -57px;
+            font-size: 14px;
+          }
+          @include desktop {
+            width: 110px;
+            height: 13px;
+            left: 55%;
+            bottom: 19px;
+            margin-left: -57px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    #technologies {
+      display: none;
+    }
+
+    #cv {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5%;
+      @include phone-portrait {
+        margin-top: -5%;
+      }
+
+      #btn-cv {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(to right, #0d2e57 0%, #a2b3cb  100%);
+        border-color: #0d2e57;
+        text-align: center;
+        text-transform: uppercase;
+        background-size: 200% auto;
+        color: #e0e4eb;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        text-decoration: none;
+        &:hover {
+          color: #0d2e57;
+          background-image: linear-gradient(to right, #e74c3c 0%, #ffffff  100%);
+          border-color: #e74c3c;
+        }
+        @include phone-landscape {
+          width: 35%;
+          height: 80%;
+          flex-direction: row;
+          justify-content: center;
+          margin-top: 0.5%;
+        }
+        @include phone-landscape-mini {
+          width: 30%;
+          height: 80%;
+          flex-direction: row;
+          justify-content: center;
+          margin-top: 0.5%;
+        }
+        @include tablet-portrait {
+          width: 35%;
+          flex-direction: row;
+          justify-content: center;
+          margin-top: 5%;
+        }
+        @include tablet-landscape {
+          width: 28%;
+          flex-direction: row;
+          justify-content: center;
+          margin-top: 5%;
+        }
+        @include desktop {
+          width: 17%;
+          margin-top: 1.5%;
+          flex-direction: row;
+          justify-content: center;
+        }
+        #button-icon {
+          @include phone-landscape {
+            margin-right: 10px;
+          }
+          @include tablet-portrait {
+            margin-right: 10px;
+          }
+          @include tablet-landscape {
+            margin-right: 10px;
+          }
+          .icon {
+
+          }
+        }
+        #button-text {
+          font-size: 12px;
+          #cv-text {
+            font-size: 15px;
+            font-weight: bold;
+            @include tablet-portrait {
+              font-size: 19px;
+            }
+            @include tablet-landscape {
+              font-size: 19px;
+            }
+          }
+          @include phone-portrait {
+            font-size: 13px;
+          }
+          @include phone-portrait-mini {
+            font-size: 12px;
+          }
+          @include tablet-portrait {
+            font-size: 17px;
+          }
+          @include tablet-landscape {
+            font-size: 17px;
+          }
+        }
+      }
+    }
   }
 }
 
-.slide2{
-  background: rgb(162,179,203);
-  background: -moz-linear-gradient(180deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  background: -webkit-linear-gradient(180deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  background: linear-gradient(180deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a2b3cb",endColorstr="#e0e4eb",GradientType=1);
-
-  h1:before {
-    border-right: 1px solid #fff;
-    left: 0;
-    top: 3em;
-  }
-
-  h1:after {
-    border-left: 1px solid #fff;
-    right: 0;
-    content: ' ';
-    position: absolute;
-    top: 5em;
-    width: 20%;
-    height: 10%;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-  }
-
-  @media #{$tablet} {
-    h1:before {
-      top: 5.75em;
+.slide3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .projet-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 16px;
+    text-align: center;
+    @include phone-portrait {
+      margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
+      font-size: 17px;
     }
-    h1:after {
-      top: 5.75em;
+    @include phone-portrait-mini {
+      margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
+      font-size: 15px;
     }
-  }
-  @media #{$desktop} {
-    h1:before {
-      top: 6.06em;
+    @include phone-portrait-max {
+      margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
+      font-size: 18px;
     }
-    h1:after {
-      top: 8.5em;
+    @include phone-landscape {
+      margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
+      font-size: 16px;
+    }
+    @include phone-landscape-mini {
+      margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
+      font-size: 12px;
+    }
+    @include tablet-portrait {
+      margin-top: calc(((#{$hex_5} * 0.288) * -1 + #{$gutter}));
+      font-size: 25px;
+    }
+    @include tablet-landscape {
+      margin-top: calc(((#{$hex_4} * 0.288) * -1 + #{$gutter}));
+      font-size: 25px;
+    }
+    @include desktop {
+      margin-top: calc(((#{$hex_5} * 0.288) * -1 + #{$gutter}));
+    }
+    .projet-yellow {
+      color: $color-dark;
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-yellow);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-yellow);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-yellow);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-yellow);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-yellow);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-yellow);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-yellow);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-yellow);
+      }
+    }
+    .projet-orange {
+      color: $color-dark;
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-orange);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-orange);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-orange);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-orange);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-orange);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-orange);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-orange);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-orange);
+      }
+    }
+    .projet-pink {
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-pink);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-pink);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-pink);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-pink);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-pink);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-pink);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-pink);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-pink);
+      }
+    }
+    .projet-red {
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-red);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-red);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-red);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-red);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-red);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-red);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-red);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-red);
+      }
+    }
+    .projet-purple {
+      color: #ffffff;
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-purple);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-purple);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-purple);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-purple);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-purple);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-purple);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-purple);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-purple);
+      }
+    }
+    .projet-teal {
+      color: #ffffff;
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-teal);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-teal);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-teal);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-teal);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-teal);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-teal);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-teal);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-teal);
+      }
+    }
+    .projet-blue {
+      color: #ffffff;
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-blue);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-blue);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-blue);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-blue);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-blue);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-blue);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-blue);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-blue);
+      }
+    }
+    .projet-apple {
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-apple);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-apple);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-apple);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-apple);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-apple);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-apple);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-apple);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-apple);
+      }
+    }
+    .projet-green {
+      color: #ffffff;
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-green);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-green);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-green);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-green);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-green);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-green);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-green);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-green);
+      }
+    }
+    .projet-silver {
+      color: $color-dark;
+      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-silver);
+      @include phone-portrait {
+        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-silver);
+      }
+      @include phone-portrait-mini {
+        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-silver);
+      }
+      @include phone-landscape {
+        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-silver);
+      }
+      @include phone-landscape-mini {
+        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-silver);
+      }
+      @include tablet-portrait {
+        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-silver);
+      }
+      @include tablet-landscape {
+        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-silver);
+      }
+      @include desktop {
+        @include projet_desktop($hex_5, $gutter, $color-silver);
+      }
     }
   }
 }
 
-.slide3{
-  background: rgb(162,179,203);
-  background: -moz-linear-gradient(225deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  background: -webkit-linear-gradient(225deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  background: linear-gradient(225deg, rgba(162,179,203,1) 0%, rgba(224,228,235,1) 75%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a2b3cb",endColorstr="#e0e4eb",GradientType=1);
-
-  h1:before {
-    border-right: 1px solid #fff;
-    left: 0;
-    top: 5em;
-  }
-
-  @media #{$tablet} {
-    h1:before {
-      top: 5.75em;
+.slide4 {
+  h1 {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center;
+    @include phone-landscape {
+      flex-direction: row !important;
+    }
+    #contact_icon {
+      height: 100px;
+      width: 100px;
+      margin: 0 0 15px 0;
+      @include phone-portrait-max {
+        height: 150px;
+        width: 150px;
+        margin: 25px 0 15px 0;
+      }
+      @include phone-landscape {
+        height: 50px;
+        width: 50px;
+        margin: 0 10px 0 0;
+      }
+      @include tablet-portrait {
+        height: 200px;
+        width: 200px;
+        margin: 25px 0 15px 0;
+      }
+      @include tablet-landscape {
+        height: 200px;
+        width: 200px;
+        margin: 15px 0 15px 0;
+      }
+      @include desktop {
+        height: 175px;
+        width: 175px;
+        margin: 0;
+      }
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
   }
-  @media #{$desktop} {
-    h1:before {
-      top: 8.5em;
+  .slide-main {
+    #infos-container {
+      margin-top: -100px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include phone-portrait-max {
+        margin-top: -50px;
+      }
+      @include phone-landscape {
+        margin-top: -15px;
+      }
+      @include tablet-landscape {
+        margin-top: -25px;
+      }
+      @include desktop {
+        margin-top: -25px;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 22px;
+        font-weight: bold;
+        @include tablet-portrait {
+          font-size: 35px;
+        }
+        @include tablet-landscape {
+          font-size: 35px;
+        }
+        @include desktop {
+          font-size: 30px;
+        }
+        .icon {
+          font-size: 50px;
+          @include tablet-portrait {
+            font-size: 75px;
+          }
+          @include tablet-landscape {
+            font-size: 75px;
+          }
+          @include desktop {
+            font-size: 65px;
+          }
+        }
+      }
+      .info:last-child {
+        @include phone-portrait-max {
+          margin-top: 50px;
+        }
+        @include tablet-portrait {
+          margin-top: 50px;
+          margin-bottom: 50px;
+        }
+        @include tablet-landscape {
+          margin-bottom: 75px;
+        }
+      }
+    }
+
+    #contact {
+      margin-top: -100px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include phone-portrait-max {
+        margin-top: -50px;
+      }
+      @include phone-landscape {
+        margin-top: 0;
+      }
+      a {
+        margin: 20px 0 5px 10px;
+        padding: 10px 15px;
+        @include phone-landscape {
+          margin-top: 0;
+        }
+        @include tablet-portrait {
+          padding: 20px 30px;
+        }
+        @include tablet-landscape {
+          padding: 20px 30px;
+        }
+      }
+      #btn-contact {
+        font-size: 20px;
+        background-image: linear-gradient(to right, #0d2e57 0%, #a2b3cb  100%);
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: #e0e4eb;
+        border-color: #0d2e57;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        @include tablet-portrait {
+          font-size: 30px;
+        }
+        @include tablet-landscape {
+          font-size: 30px;
+        }
+        &:hover {
+          color: #0d2e57;
+          background-image: linear-gradient(to right, #e74c3c 0%, #ffffff  100%);
+          border-color: #e74c3c;
+        }
+      }
     }
   }
 }
