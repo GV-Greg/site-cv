@@ -219,8 +219,8 @@ body {
 }
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .slide1 #container-logo {
-    height: 120px;
-    width: 120px;
+    height: 100px;
+    width: 100px;
     margin-top: 0;
   }
 }
@@ -708,7 +708,7 @@ body {
   color: #0d2e57;
 }
 .slide1 .slide-main #res-soc-container .reseau-social:hover .hexagone {
-  background: #e74c3c;
+  background: #48dcd7;
 }
 @media only screen and (max-width: 425px) and (min-height: 600px) and (orientation: portrait) {
   .slide1 .slide-main #res-soc-container .reseau-social {
@@ -745,6 +745,9 @@ body {
   z-index: 10;
   color: #fff;
 }
+.slide1 .slide-main #res-soc-container .reseau-social .middle {
+  display: none;
+}
 @media only screen and (max-width: 425px) and (min-height: 600px) and (orientation: portrait) {
   .slide1 .slide-main #res-soc-container .reseau-social .middle {
     display: none;
@@ -757,7 +760,9 @@ body {
 }
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .slide1 .slide-main #res-soc-container .reseau-social .middle {
-    display: none;
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
@@ -781,21 +786,27 @@ body {
   }
 }
 .slide1 .slide-main #res-soc-container .reseau-social .large {
-  display: none;
+  display: block;
+  width: 0.75em;
+  height: 0.75em;
 }
 @media only screen and (max-width: 425px) and (min-height: 600px) and (orientation: portrait) {
   .slide1 .slide-main #res-soc-container .reseau-social .large {
     display: inline-block;
+    width: 1em;
+    height: 1em;
   }
 }
 @media only screen and (max-width: 425px) and (min-height: 800px) and (orientation: portrait) {
   .slide1 .slide-main #res-soc-container .reseau-social .large {
     display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .slide1 .slide-main #res-soc-container .reseau-social .large {
-    display: inline-block;
+    display: none;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
@@ -806,24 +817,30 @@ body {
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .slide1 .slide-main #res-soc-container .reseau-social .large {
     display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
   }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   .slide1 .slide-main #res-soc-container .reseau-social .large {
     display: inline-block;
+    width: 1em;
+    height: 1em;
   }
 }
 @media only screen and (min-width: 1200px) {
   .slide1 .slide-main #res-soc-container .reseau-social .large {
     display: inline-block;
+    width: 1em;
+    height: 1em;
   }
 }
 .slide1 .slide-main #res-soc-container .reseau-social .hexagone {
   display: flex;
   justify-content: center;
   position: relative;
-  width: 1.25em;
-  height: 2.165em;
+  width: 1.5em;
+  height: 2.75em;
   border-radius: 1em/0.3em;
   background: #0d2e57;
   z-index: 5;
@@ -842,8 +859,8 @@ body {
 }
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .slide1 .slide-main #res-soc-container .reseau-social .hexagone {
-    width: 1.85em;
-    height: 3.2em;
+    width: 1.3em;
+    height: 2.2em;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
@@ -895,7 +912,7 @@ body {
   }
 }
 .slide2 .slide-main #description p {
-  font-size: 12px;
+  font-size: 11px;
   text-align: justify;
 }
 @media only screen and (max-width: 300px) and (min-height: 600px) and (orientation: portrait) {
@@ -910,7 +927,8 @@ body {
 }
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .slide2 .slide-main #description p {
-    font-size: 11px;
+    font-size: 10px;
+    margin-block-end: 0.5em;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
@@ -920,17 +938,17 @@ body {
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .slide2 .slide-main #description p {
-    font-size: 22px;
+    font-size: 19px;
   }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   .slide2 .slide-main #description p {
-    font-size: 22px;
+    font-size: 19px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .slide2 .slide-main #description p {
-    font-size: 22px;
+    font-size: 19px;
     line-height: 28px;
   }
 }
@@ -1241,7 +1259,6 @@ body {
   }
 }
 .slide2 .slide-main #cv #btn-cv {
-  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1254,25 +1271,25 @@ body {
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
   text-decoration: none;
+  font-size: 25px;
+  padding: 5px 10px;
 }
 .slide2 .slide-main #cv #btn-cv:hover {
   color: #0d2e57;
-  background-image: linear-gradient(to right, #e74c3c 0%, #ffffff 100%);
-  border-color: #e74c3c;
+  background-image: linear-gradient(to right, #48dcd7 0%, #ffffff 100%);
+  border-color: #48dcd7;
 }
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .slide2 .slide-main #cv #btn-cv {
-    width: 35%;
-    height: 80%;
     flex-direction: row;
     justify-content: center;
     margin-top: 0.5%;
+    font-size: 20px;
+    padding: 0 15px 2px 15px;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
   .slide2 .slide-main #cv #btn-cv {
-    width: 30%;
-    height: 80%;
     flex-direction: row;
     justify-content: center;
     margin-top: 0.5%;
@@ -1280,15 +1297,15 @@ body {
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .slide2 .slide-main #cv #btn-cv {
-    width: 35%;
     flex-direction: row;
     justify-content: center;
     margin-top: 5%;
+    font-size: 35px;
+    padding: 4px 15px 8px 15px;
   }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   .slide2 .slide-main #cv #btn-cv {
-    width: 28%;
     flex-direction: row;
     justify-content: center;
     margin-top: 5%;
@@ -1296,7 +1313,6 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .slide2 .slide-main #cv #btn-cv {
-    width: 17%;
     margin-top: 1.5%;
     flex-direction: row;
     justify-content: center;
@@ -1304,11 +1320,13 @@ body {
 }
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .slide2 .slide-main #cv #btn-cv #button-icon {
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-top: 6px;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .slide2 .slide-main #cv #btn-cv #button-icon {
+    margin-top: 4px;
     margin-right: 10px;
   }
 }
@@ -1367,49 +1385,57 @@ body {
   justify-content: center;
   text-decoration: none;
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 14px;
   text-align: center;
 }
 @media only screen and (max-width: 425px) and (min-height: 600px) and (orientation: portrait) {
   .slide3 .projet-row {
     margin-top: calc((5rem * 0.288) * -1 + 0.5rem);
     font-size: 17px;
+    line-height: 16px;
   }
 }
 @media only screen and (max-width: 300px) and (min-height: 600px) and (orientation: portrait) {
   .slide3 .projet-row {
     margin-top: calc((5rem * 0.288) * -1 + 0.5rem);
     font-size: 15px;
+    line-height: 14px;
   }
 }
 @media only screen and (max-width: 425px) and (min-height: 800px) and (orientation: portrait) {
   .slide3 .projet-row {
     margin-top: calc((5rem * 0.288) * -1 + 0.5rem);
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 14px;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .slide3 .projet-row {
     margin-top: calc((5rem * 0.288) * -1 + 0.5rem);
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 14px;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
   .slide3 .projet-row {
     margin-top: calc((5rem * 0.288) * -1 + 0.5rem);
     font-size: 12px;
+    line-height: 11px;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .slide3 .projet-row {
     margin-top: calc((10rem * 0.288) * -1 + 0.5rem);
     font-size: 25px;
+    line-height: 24px;
   }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
   .slide3 .projet-row {
     margin-top: calc((9rem * 0.288) * -1 + 0.5rem);
     font-size: 25px;
+    line-height: 24px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -3446,6 +3472,7 @@ body {
   }
 }
 .slide3 .projet-row .projet-apple {
+  color: #ffffff;
   cursor: pointer;
 }
 .slide3 .projet-row .projet-apple div {
@@ -4401,7 +4428,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
@@ -4420,7 +4447,7 @@ body {
   }
 }
 .slide4 .slide-main #infos-container .info .icon {
-  font-size: 50px;
+  font-size: 30px;
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .slide4 .slide-main #infos-container .info .icon {
@@ -4470,41 +4497,24 @@ body {
     margin-top: 0;
   }
 }
-.slide4 .slide-main #contact a {
-  margin: 20px 0 5px 10px;
-  padding: 10px 15px;
-}
-@media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
-  .slide4 .slide-main #contact a {
-    margin-top: 0;
-  }
-}
-@media only screen and (min-width: 768px) and (orientation: portrait) {
-  .slide4 .slide-main #contact a {
-    padding: 20px 30px;
-  }
-}
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
-  .slide4 .slide-main #contact a {
-    padding: 20px 30px;
-  }
-}
 .slide4 .slide-main #contact #btn-contact {
+  display: flex;
+  padding: 2px 25px 8px 25px;
   font-size: 20px;
   background-image: linear-gradient(to right, #0d2e57 0%, #a2b3cb 100%);
   text-align: center;
-  text-transform: capitalize;
+  font-variant: small-caps;
   font-weight: bold;
-  transition: 0.5s;
   background-size: 200% auto;
   color: #e0e4eb;
-  border-color: #0d2e57;
+  border: 2px outset #0d2e57;
   box-shadow: 0 0 20px #eee;
   border-radius: 10px;
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .slide4 .slide-main #contact #btn-contact {
-    font-size: 30px;
+    font-size: 35px;
+    padding: 2px 25px 8px 25px;
   }
 }
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
@@ -4514,8 +4524,8 @@ body {
 }
 .slide4 .slide-main #contact #btn-contact:hover {
   color: #0d2e57;
-  background-image: linear-gradient(to right, #e74c3c 0%, #ffffff 100%);
-  border-color: #e74c3c;
+  background-image: linear-gradient(to right, #48dcd7 0%, #ffffff 100%);
+  border-color: #48dcd7;
 }
 
 .swiper-button-prev, .swiper-button-next {
