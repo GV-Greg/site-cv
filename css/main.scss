@@ -28,6 +28,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700,900');
 
 @mixin margin-auto {
   top: 0;
@@ -48,7 +49,7 @@ $gutter_portrait: 0.3rem;
 $gutter_landscape: 0.2rem;
 $gutter: 0.5rem;
 
-@mixin projet($size, $multi, $gutter, $color) {
+@mixin project($size, $multi, $gutter, $color) {
   cursor: pointer;
   div {
     width: $size;
@@ -169,6 +170,7 @@ body {
   width: 100%;
   height: 100%;
   background: $color-dark;
+  overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -180,6 +182,7 @@ body {
 }
 
 .swiper-slide {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1264,297 +1267,315 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .projet-row {
+  .project-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: 15px;
-    line-height: 14px;
-    text-align: center;
     @include phone-portrait {
       margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
-      font-size: 17px;
-      line-height: 16px;
     }
     @include phone-portrait-mini {
       margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
-      font-size: 15px;
-      line-height: 14px;
     }
     @include phone-portrait-max {
       margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
-      font-size: 15px;
-      line-height: 14px;
     }
     @include phone-landscape {
       margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
-      font-size: 15px;
-      line-height: 14px;
     }
     @include phone-landscape-mini {
       margin-top: calc(((#{$hex_2} * 0.288) * -1 + #{$gutter}));
-      font-size: 12px;
-      line-height: 11px;
     }
     @include tablet-portrait {
       margin-top: calc(((#{$hex_5} * 0.288) * -1 + #{$gutter}));
-      font-size: 25px;
-      line-height: 24px;
     }
     @include tablet-landscape {
       margin-top: calc(((#{$hex_4} * 0.288) * -1 + #{$gutter}));
-      font-size: 25px;
-      line-height: 24px;
     }
     @include desktop {
       margin-top: calc(((#{$hex_5} * 0.288) * -1 + #{$gutter}));
     }
-    .projet-yellow {
-      color: $color-dark;
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-yellow);
+    .project-btn {
+      background: none;
+      border: none;
+      font-size: 15px;
+      line-height: 14px;
+      text-decoration: none;
+      font-weight: bolder;
+      text-align: center;
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-yellow);
+        font-size: 17px;
+        line-height: 16px;
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-yellow);
+        font-size: 15px;
+        line-height: 14px;
+      }
+      @include phone-portrait-max {
+        font-size: 15px;
+        line-height: 14px;
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-yellow);
+        font-size: 15px;
+        line-height: 14px;
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-yellow);
+        font-size: 12px;
+        line-height: 11px;
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-yellow);
+        font-size: 25px;
+        line-height: 24px;
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-yellow);
+        font-size: 25px;
+        line-height: 24px;
+      }
+    }
+    .project-yellow {
+      color: $color-dark;
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-yellow);
+      @include phone-portrait {
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-yellow);
+      }
+      @include phone-portrait-mini {
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-yellow);
+      }
+      @include phone-landscape {
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-yellow);
+      }
+      @include phone-landscape-mini {
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-yellow);
+      }
+      @include tablet-portrait {
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-yellow);
+      }
+      @include tablet-landscape {
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-yellow);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-yellow);
       }
     }
-    .projet-orange {
+    .project-orange {
       color: $color-dark;
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-orange);
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-orange);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-orange);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-orange);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-orange);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-orange);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-orange);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-orange);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-orange);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-orange);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-orange);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-orange);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-orange);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-orange);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-orange);
       }
     }
-    .projet-pink {
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-pink);
+    .project-pink {
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-pink);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-pink);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-pink);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-pink);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-pink);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-pink);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-pink);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-pink);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-pink);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-pink);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-pink);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-pink);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-pink);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-pink);
       }
     }
-    .projet-red {
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-red);
+    .project-red {
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-red);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-red);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-red);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-red);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-red);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-red);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-red);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-red);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-red);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-red);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-red);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-red);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-red);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-red);
       }
     }
-    .projet-purple {
+    .project-purple {
       color: #ffffff;
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-purple);
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-purple);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-purple);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-purple);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-purple);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-purple);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-purple);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-purple);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-purple);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-purple);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-purple);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-purple);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-purple);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-purple);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-purple);
       }
     }
-    .projet-teal {
+    .project-teal {
       color: #ffffff;
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-teal);
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-teal);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-teal);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-teal);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-teal);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-teal);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-teal);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-teal);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-teal);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-teal);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-teal);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-teal);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-teal);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-teal);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-teal);
       }
     }
-    .projet-blue {
+    .project-blue {
       color: #ffffff;
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-blue);
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-blue);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-blue);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-blue);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-blue);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-blue);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-blue);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-blue);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-blue);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-blue);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-blue);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-blue);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-blue);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-blue);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-blue);
       }
     }
-    .projet-apple {
+    .project-apple {
       color: #ffffff;
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-apple);
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-apple);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-apple);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-apple);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-apple);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-apple);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-apple);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-apple);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-apple);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-apple);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-apple);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-apple);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-apple);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-apple);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-apple);
       }
     }
-    .projet-green {
+    .project-green {
       color: #ffffff;
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-green);
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-green);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-green);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-green);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-green);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-green);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-green);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-green);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-green);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-green);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-green);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-green);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-green);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-green);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-green);
       }
     }
-    .projet-silver {
+    .project-silver {
       color: $color-dark;
-      @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-silver);
+      @include project($hex_2, $multi_portrait, $gutter_portrait, $color-silver);
       @include phone-portrait {
-        @include projet($hex_3, $multi_portrait, $gutter_portrait, $color-silver);
+        @include project($hex_3, $multi_portrait, $gutter_portrait, $color-silver);
       }
       @include phone-portrait-mini {
-        @include projet($hex_2, $multi_portrait, $gutter_portrait, $color-silver);
+        @include project($hex_2, $multi_portrait, $gutter_portrait, $color-silver);
       }
       @include phone-landscape {
-        @include projet($hex_2, $multi_landscape, $gutter_landscape, $color-silver);
+        @include project($hex_2, $multi_landscape, $gutter_landscape, $color-silver);
       }
       @include phone-landscape-mini {
-        @include projet($hex_1, $multi_landscape, $gutter_landscape, $color-silver);
+        @include project($hex_1, $multi_landscape, $gutter_landscape, $color-silver);
       }
       @include tablet-portrait {
-        @include projet($hex_5, $multi_portrait, $gutter_portrait, $color-silver);
+        @include project($hex_5, $multi_portrait, $gutter_portrait, $color-silver);
       }
       @include tablet-landscape {
-        @include projet($hex_4, $multi_landscape, $gutter_landscape, $color-silver);
+        @include project($hex_4, $multi_landscape, $gutter_landscape, $color-silver);
       }
       @include desktop {
         @include projet_desktop($hex_5, $gutter, $color-silver);
@@ -1726,4 +1747,162 @@ body {
 
 .swiper-pagination-bullet-active {
   background-color: #0d2e57;
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .modal-overlay {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .modal-card {
+    z-index: 3;
+    position: relative;
+    width: 800px;
+    height: 50vh;
+    display: flex;
+    top: -100%;
+    margin-top: 3px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: #fff;
+    background: #4c6060;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transition: all 5s;
+    .card-badge {
+      z-index: 4;
+      position: absolute;
+      top: -2px;
+      left: -70px;
+      height: 50px;
+      background: #58C777;
+      width: 200px;
+      text-align: center;
+      transform: rotate(-45deg);
+      box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.34);
+      &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        height: 100px;
+        width: 100px;
+        background: #EDF1EE;
+        top: -55px;
+        left: 130px;
+        transform: rotate(-45deg);
+        box-shadow: -115px -121px 0px 0px #EDF1EE;
+      }
+      .left {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 50px;
+        left: 25px;
+        height: 8px;
+        width: 8px;
+        background: linear-gradient(135deg, rgba(90, 146, 106, 1) 50%,rgba(90, 146, 106, 0) 50.1%);
+      }
+      .right {
+        position: absolute;
+        content: '';
+        display: block;
+        top: 50px;
+        left: 157px;
+        height: 8px;
+        width: 8px;
+        background: linear-gradient(135deg, rgba(90, 146, 106, 1) 50%,rgba(90, 146, 106, 0) 50.1%);
+        transform: rotate(90deg);
+      }
+      span {
+        margin-right: 8px;
+        font-size: 15px;
+        line-height: 50px;
+        font-family: sans-serif;
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+    .close-btn {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      padding: 0;
+      font-size: 1.3rem;
+      background: #fff;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      color: #ff0000b2;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 0, 0, 0.7);
+        color: #fff;
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+    .card-design {
+      z-index: 5;
+      position: absolute;
+      top: 25px;
+      right: 75px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.1);
+      font-size: 6rem;
+      font-weight: 900;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .card-heading {
+      z-index: 6;
+      position: absolute;
+      color: #fff;
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 75px;
+    }
+    .card-body {
+      z-index: 6;
+      position: relative;
+      margin-top: 125px;
+      width: 95%;
+      padding: 0 20px;
+      .card-description {
+        text-align: justify;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+      .card-technologies {
+
+      }
+      .card-actions {
+
+      }
+    }
+
+
+  }
 }

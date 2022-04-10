@@ -1,7 +1,3 @@
-function test() {
-    alert('test')
-}
-
 function DownloadFile(fileName) {
     // Set the File URL.
     var url = "files/" + fileName;

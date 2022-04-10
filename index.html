@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="css/main.css" />
+<!--    <script type="text/javascript" src="./assets/projects.json"></script>-->
 </head>
 <body>
     <div class="swiper">
@@ -165,31 +166,35 @@
                     Portfolio
                 </h1>
                 <div class="slide-main">
-                    <div id="projets-container">
-                        <div class="projet-row">
-                            <a class="link projet-blue" href="https://evolutic2020.interface3namur.be/" target="_blank" rel="noopener noreferrer">
+                    <div id="project-container">
+                        <div class="project-row">
+                            <button class="project-btn project-blue" onclick="openModal('evolutic')">
                                 <div>Evolu'TIC<br />2020</div>
-                            </a>
-                            <a class="link projet-teal" href="https://github.com/GV-Greg/office-des-coffres-front" target="_blank" rel="noopener noreferrer">
-                                <div>Site CV<br />(git)</div>
-                            </a>
+                            </button>
+                            <button class="project-btn project-teal" onclick="openModal('site cv')">
+                                <div>Site CV</div>
+                            </button>
                         </div>
-                        <div class="projet-row">
-                            <a class="link projet-yellow" href="https://github.com/GV-Greg/KaraoCube" target="_blank" rel="noopener noreferrer">
-                                <div>KaraoCube<br />(git)</div>
-                            </a>
-                            <a class="link projet-orange" href="https://gv-greg.github.io/RK-Modules/" target="_blank" rel="noopener noreferrer">
+                        <div class="project-row">
+                            <button class="project-btn project-yellow" onclick="openModal('karaocube')">
+                                <div>KaraoCube</div>
+                            </button>
+                            <button class="project-btn project-orange" onclick="openModal('rk modules')">
                                 <div>RK<br />Modules</div>
-                            </a>
-                            <div class="projet-silver"><div>A venir</div></div>
+                            </button>
+<!--                            <a class="link project-orange" href="https://gv-greg.github.io/RK-Modules/" target="_blank" rel="noopener noreferrer">-->
+<!--                                <div>RK<br />Modules</div>-->
+<!--                            </a>-->
+                            <button class="project-btn project-red" onclick="openModal('office des coffres')">
+                                <div>Office<br />des<br />coffres</div>
+                            </button>
+<!--                            <a class="link project-apple" href="https://github.com/GV-Greg/office-des-coffres-front" target="_blank" rel="noopener noreferrer">-->
+<!--                                <div>Office des<br />coffres<br />front (git)</div>-->
+<!--                            </a>-->
                         </div>
-                        <div class="projet-row">
-                            <a class="link projet-apple" href="https://github.com/GV-Greg/office-des-coffres-front" target="_blank" rel="noopener noreferrer">
-                                <div>Office des<br />coffres<br />front (git)</div>
-                            </a>
-                            <a class="link projet-apple" href="https://github.com/GV-Greg/Office-des-Coffres-back" target="_blank" rel="noopener noreferrer">
-                                <div>Office des<br />coffres<br />back (git)</div>
-                            </a>
+                        <div class="project-row">
+                            <div class="project-btn project-silver"><div>A venir</div></div>
+                            <div class="project-btn project-silver"><div>A venir</div></div>
                         </div>
                     </div>
                 </div>
@@ -214,10 +219,31 @@
         <div class="swiper-button-next swiper-button-white"></div>
         <div class="swiper-button-prev swiper-button-white"></div>
     </div>
+    <div class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-card">
+            <div class="card-badge">
+                <i class="left"></i>
+                <i class="right"></i>
+                <span id="modal-statut"></span>
+            </div>
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <span class="card-design">PROJET</span>
+            <h1 class="card-heading" id="modal-title"></h1>
+            <div class="card-body">
+                <p class="card-description" id="modal-description"></p>
+                <div class="card-technologies" id="modal-technologies"></div>
+                <div class="card-actions" id="modal-actions">
+                    <a href="#">Lien</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/swiper.js" type="module"></script>
+    <script type="module" src="./js/swiper.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="./js/pdf.js"></script>
+    <script type="text/javascript" src="./js/modal.js"></script>
+    <script type="text/javascript" src="./js/pdf.js"></script>
 </body>
 </html>

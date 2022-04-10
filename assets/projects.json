@@ -1,0 +1,54 @@
+{
+  "evolutic" : {
+    "description" : "Projet réalisé avec wordpress avec la création d'un thème personnalisé de a à z.",
+    "statut" : "PROD",
+    "technologies" : {
+      "wordpress": "blue"
+    },
+    "url-project" : "https://evolutic2020.interface3namur.be/"
+  },
+  "site cv" : {
+    "description" : "Projet personnel réalisé en javascript vanilla avec la bibliothèque swiper.js pour l'effet 3D. Utilisation de Sass pour compiler le CSS.",
+    "statut" : "PROD",
+    "technologies" : {
+      "javascript": "yellow",
+      "sass": "pink"
+    },
+    "url-github-1" : "https://github.com/GV-Greg/site-cv"
+  },
+  "karaocube" : {
+    "description" : "Petit projet en laravel qui peut servir pour une personne qui anime des karaokés. Le principe est que les personnes participantes à la soirée puisse recherche une chanson et l'envoyer à l'animateur avec leur prénom (et s'il en trouve pas de pouvoir entrer le titre d'une chanson. L'animateur a accès à un dashboard (partie anim) où il voit les demandes.",
+    "statut" : "DEMO",
+    "technologies" : {
+      "laravel 8": "red",
+      "alpinejs": "sky",
+      "tailwindCss": "blue"
+    },
+    "url-github-1" : "https://github.com/GV-Greg/KaraoCube"
+  },
+  "rk modules" : {
+    "description" : "Projet de test pour la création de de la base de modules devant être intégrés au projet 'Office des coffres' afin de les faire tester avant leur implémentation.",
+    "statut" : "DEV",
+    "technologies" : {
+      "vuejs 3": "green",
+      "vite" : "violet",
+      "vue-sweetalert": "purple"
+    },
+    "url-project" : "https://gv-greg.github.io/RK-Modules/",
+    "url-github-1" : "https://gv-greg.github.io/RK-Modules/"
+  },
+  "office des coffres" : {
+    "description" : "Projet personnel afin de créer des modules d'aide pour le jeu 'Renaissance Kingdoms' - jeu de rôle médiéval sur navigateur. Le backend est une api laravel avec un dashboard admin tandis que le front se décline en une app vuejs (en prod) et une app en react pour l'apprentissage de celui-ci (juste en dev).",
+    "statut" : "DEV",
+    "technologies" : {
+      "laravel 8": "red",
+      "react 17": "sky",
+      "vuejs 3": "green",
+      "tailwindCss": "blue",
+      "sweetalert2": "purple"
+    },
+    "url-github-1" : "https://github.com/GV-Greg/office-des-coffres-front",
+    "url-github-2" : "https://github.com/GV-Greg/Office-des-Coffres-back"
+  }
+}
+
