@@ -12,16 +12,12 @@ function loadFile() {
     }
     xobj.send();
 }
-loadFile()
+loadFile();
 let projects;
 function loadData() {
-    projects = data[0]
+    projects = data[0];
 }
-setTimeout(loadData, 500)
-
-const modalBtn = document.querySelector('.project-btn');
-const modalCloseBtn = document.querySelector('.close-btn');
-
+setTimeout(loadData, 500);
 const modal = document.querySelector('.modal');
 const modalCard = document.querySelector('.modal-card');
 const modalStatut = document.getElementById('modal-statut');
@@ -45,8 +41,6 @@ function openModal(project) {
         }
         for(let action in projects[project].actions) {
             let tag = document.createElement('a');
-            // let newContent = document.createTextNode(action);
-            // tag.appendChild(newContent);
             tag.href = projects[project].actions[action];
             tag.target = '_blank';
             tag.datafront = action;
@@ -67,7 +61,6 @@ function openModal(project) {
     } else {
         alert("Pas d'info sur ce projet.")
     }
-
 }
 
 function closeModal() {

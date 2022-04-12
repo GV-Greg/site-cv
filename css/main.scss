@@ -16,11 +16,14 @@
 @mixin phone-landscape-mini {
   @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) { @content; }
 }
+@mixin tablet-portrait-mini {
+  @media only screen and (min-width: 600px) and (orientation: portrait) { @content; }
+}
 @mixin tablet-portrait {
   @media only screen and (min-width: 768px) and (orientation: portrait) { @content; }
 }
 @mixin tablet-landscape {
-  @media only screen and (min-width: 1000px) and (orientation: landscape) { @content; }
+  @media only screen and (min-width: 960px) and (orientation: landscape) { @content; }
 }
 @mixin desktop {
   @media only screen and (min-width: 1200px) { @content; }
@@ -163,7 +166,7 @@ $violet: #a834da;
 $pink: #d969a1;
 $yellow: #e3cd1b;
 $purple: #bc76e8;
-$red: #e82f29;
+$red: #ec4843;
 
 html, body {
   position: relative;
@@ -236,6 +239,9 @@ body {
       font-size: 1.5em;
     }
     @include tablet-portrait {
+      font-size: 4em;
+    }
+    @include tablet-portrait-mini {
       font-size: 4em;
     }
     @include tablet-landscape {
@@ -354,6 +360,12 @@ body {
     -ms-flex-pack: center;
     -webkit-justify-content: center;
   }
+  @include tablet-portrait-mini {
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+  }
   @include tablet-landscape {
     justify-content: center;
     -webkit-box-pack: center;
@@ -383,6 +395,11 @@ body {
     @include tablet-portrait {
       height: 300px;
       width: 300px;
+      margin-top: 5%;
+    }
+    @include tablet-portrait-mini {
+      height: 200px;
+      width: 200px;
       margin-top: 5%;
     }
     @include tablet-landscape {
@@ -437,6 +454,15 @@ body {
         margin-top: 0;
       }
       @include tablet-portrait {
+        margin-top: 5%;
+        #prenom {
+          font-size: 1em;
+        }
+        #nom {
+          font-size: 0.7em;
+        }
+      }
+      @include tablet-portrait-mini {
         margin-top: 5%;
         #prenom {
           font-size: 1em;
@@ -501,6 +527,11 @@ body {
         justify-content: center;
         font-size: 45px;
       }
+      @include tablet-portrait-mini {
+        display: flex;
+        justify-content: center;
+        font-size: 45px;
+      }
       @include tablet-landscape {
         display: flex;
         flex-direction: row;
@@ -541,6 +572,10 @@ body {
           margin-top: 0;
           height: 60px;
         }
+        @include tablet-portrait-mini {
+          margin-top: 0;
+          height: 60px;
+        }
         @include tablet-landscape {
           margin-top: 0;
           height: 45px;
@@ -570,6 +605,9 @@ body {
           }
           @include tablet-portrait {
             display: inline-block;
+            animation: moveTabletPortrait 5s infinite 1s;
+          }
+          @include tablet-portrait-mini {
             animation: moveTabletPortrait 5s infinite 1s;
           }
           @include tablet-landscape {
@@ -707,6 +745,25 @@ body {
           display: inline-block;
         }
       }
+      @include tablet-portrait-mini {
+        margin: 0 0 25px 0;
+        flex-direction: row;
+        font-size: 25px;
+        .techno-item {
+          display: flex;
+          align-items: center;
+          .ion-icon, .mdi {
+            margin: 0 3px 0 0;
+          }
+          .bullet {
+            margin: 0 5px;
+            display: inline-block;
+          }
+        }
+        .techno-item:last-child {
+          display: inline-block;
+        }
+      }
       @include tablet-landscape {
         margin: 10px 0;
         flex-direction: row;
@@ -767,6 +824,9 @@ body {
         @include tablet-portrait {
           margin: 0 25px;
         }
+        @include tablet-portrait-mini {
+          margin: 0 25px;
+        }
         @include tablet-landscape {
           margin: 0 30px;
         }
@@ -795,6 +855,9 @@ body {
             display: block;
           }
           @include tablet-portrait {
+            display: none;
+          }
+          @include tablet-portrait-mini {
             display: none;
           }
           @include tablet-landscape {
@@ -828,6 +891,11 @@ body {
             display: inline-block;
             width: 1.4em;
             height: 1.4em;
+          }
+          @include tablet-portrait-mini {
+            display: inline-block;
+            width: 1.2em;
+            height: 1.2em;
           }
           @include tablet-landscape {
             display: inline-block;
@@ -868,6 +936,10 @@ body {
           @include tablet-portrait {
             width: 3em;
             height: 5.2em;
+          }
+          @include tablet-portrait-mini {
+            width: 2.5em;
+            height: 4.5em;
           }
           @include tablet-landscape {
             width: 2em;
@@ -927,6 +999,9 @@ body {
         @include tablet-portrait {
           font-size: clamp(16px, 19px, 22px);
         }
+        @include tablet-portrait-mini {
+          font-size: clamp(16px, 19px, 22px);
+        }
         @include tablet-landscape {
           font-size: clamp(16px, 19px, 22px);
         }
@@ -963,6 +1038,12 @@ body {
         row-gap: 0;
       }
       @include tablet-portrait {
+        margin: 0 10%;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 10px;
+      }
+      @include tablet-portrait-mini {
         margin: 0 10%;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 20px;
@@ -1020,6 +1101,10 @@ body {
           width: 4em;
           height: 6.2em;
         }
+        @include tablet-portrait-mini {
+          width: 3em;
+          height: 4.5em;
+        }
         @include tablet-landscape {
           width: 4em;
           height: 6.2em;
@@ -1049,6 +1134,10 @@ body {
               font-size: 30px;
               margin-top: 7.5px;
             }
+            @include tablet-portrait-mini {
+              font-size: 20px;
+              margin-top: 5px;
+            }
             @include tablet-landscape {
               font-size: 30px;
               margin-top: 7.5px;
@@ -1057,6 +1146,9 @@ body {
           .middle {
             @include tablet-portrait {
               display: none;
+            }
+            @include tablet-portrait-mini {
+              margin-top: 5px;
             }
             @include tablet-landscape {
               display: none;
@@ -1088,6 +1180,10 @@ body {
           @include tablet-portrait {
             width: 60px;
             height: 60px;
+          }
+          @include tablet-portrait-mini {
+            width: 40px;
+            height: 40px;
           }
           @include tablet-landscape {
             width: 60px;
@@ -1139,6 +1235,14 @@ body {
             height: 13px;
             left: 55%;
             bottom: 19px;
+            margin-left: -57px;
+            font-size: 12px;
+          }
+          @include tablet-portrait-mini {
+            width: 110px;
+            height: 13px;
+            left: 55%;
+            bottom: 10px;
             margin-left: -57px;
             font-size: 12px;
           }
@@ -1300,6 +1404,9 @@ body {
     @include tablet-portrait {
       margin-top: calc(((#{$hex_5} * 0.288) * -1 + #{$gutter}));
     }
+    @include tablet-portrait-mini {
+      margin-top: calc(((#{$hex_5} * 0.288) * -1 + #{$gutter}));
+    }
     @include tablet-landscape {
       margin-top: calc(((#{$hex_4} * 0.288) * -1 + #{$gutter}));
     }
@@ -1338,6 +1445,10 @@ body {
         font-size: 25px;
         line-height: 24px;
       }
+      @include tablet-portrait-mini {
+        font-size: 25px;
+        line-height: 24px;
+      }
       @include tablet-landscape {
         font-size: 25px;
         line-height: 24px;
@@ -1360,6 +1471,9 @@ body {
       }
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-yellow);
+      }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-yellow);
       }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-yellow);
@@ -1386,6 +1500,9 @@ body {
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-orange);
       }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-orange);
+      }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-orange);
       }
@@ -1410,6 +1527,9 @@ body {
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-pink);
       }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-pink);
+      }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-pink);
       }
@@ -1433,6 +1553,9 @@ body {
       }
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-red);
+      }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-red);
       }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-red);
@@ -1459,6 +1582,9 @@ body {
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-purple);
       }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-purple);
+      }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-purple);
       }
@@ -1483,6 +1609,9 @@ body {
       }
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-teal);
+      }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-teal);
       }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-teal);
@@ -1509,6 +1638,9 @@ body {
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-blue);
       }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-blue);
+      }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-blue);
       }
@@ -1533,6 +1665,9 @@ body {
       }
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-apple);
+      }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-apple);
       }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-apple);
@@ -1559,6 +1694,9 @@ body {
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-green);
       }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-green);
+      }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-green);
       }
@@ -1583,6 +1721,9 @@ body {
       }
       @include tablet-portrait {
         @include project($hex_5, $multi_portrait, $gutter_portrait, $color-silver);
+      }
+      @include tablet-portrait-mini {
+        @include project($hex_4, $multi_portrait, $gutter_portrait, $color-silver);
       }
       @include tablet-landscape {
         @include project($hex_4, $multi_landscape, $gutter_landscape, $color-silver);
@@ -1618,6 +1759,11 @@ body {
         margin: 0 10px 0 0;
       }
       @include tablet-portrait {
+        height: 200px;
+        width: 200px;
+        margin: 25px 0 15px 0;
+      }
+      @include tablet-portrait-mini {
         height: 200px;
         width: 200px;
         margin: 25px 0 15px 0;
@@ -1666,6 +1812,9 @@ body {
         @include tablet-portrait {
           font-size: 35px;
         }
+        @include tablet-portrait-mini {
+          font-size: 35px;
+        }
         @include tablet-landscape {
           font-size: 35px;
         }
@@ -1675,6 +1824,9 @@ body {
         .icon {
           font-size: 30px;
           @include tablet-portrait {
+            font-size: 75px;
+          }
+          @include tablet-portrait-mini {
             font-size: 75px;
           }
           @include tablet-landscape {
@@ -1690,6 +1842,10 @@ body {
           margin-top: 50px;
         }
         @include tablet-portrait {
+          margin-top: 50px;
+          margin-bottom: 50px;
+        }
+        @include tablet-portrait-mini {
           margin-top: 50px;
           margin-bottom: 50px;
         }
@@ -1725,6 +1881,10 @@ body {
         box-shadow: 0 0 20px #eee;
         border-radius: 10px;
         @include tablet-portrait {
+          font-size: 35px;
+          padding: 2px 25px 8px 25px;
+        }
+        @include tablet-portrait-mini {
           font-size: 35px;
           padding: 2px 25px 8px 25px;
         }
@@ -1781,10 +1941,11 @@ body {
   .modal-card {
     z-index: 3;
     position: relative;
-    width: 800px;
+    max-width: 800px;
+    max-height: 90vh;
     display: flex;
     top: -100%;
-    margin-top: 3px;
+    margin: 0 25px;
     flex-direction: column;
     justify-content: start;
     align-items: center;
@@ -1794,17 +1955,25 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     overflow: hidden;
     transition: all 5s ease;
+    @include desktop {
+      max-height: 100vh;
+      margin: 0;
+    }
     .card-badge {
       z-index: 4;
       position: absolute;
-      top: -2px;
-      left: -70px;
+      top: -3px;
+      left: -71px;
       height: 50px;
       background: #58C777;
       width: 200px;
       text-align: center;
       transform: rotate(-45deg);
       box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.34);
+      @include desktop {
+        top: -2px;
+        left: -70px;
+      }
       &:after {
         position: absolute;
         content: '';
@@ -1875,29 +2044,124 @@ body {
     .card-design {
       z-index: 5;
       position: absolute;
-      top: 25px;
-      right: 75px;
+      top: 35px;
+      right: -15px;
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.1);
-      font-size: 6rem;
+      font-size: 3rem;
       font-weight: 900;
       font-family: 'Montserrat', sans-serif;
+      @include phone-portrait {
+        font-size: 4rem;
+        right: -15px;
+      }
+      @include phone-portrait-mini {
+        font-size: 3rem;
+        right: -15px;
+        top: 35px;
+      }
+      @include phone-landscape {
+        font-size: 6rem;
+        right: 75px;
+        top: 10px;
+      }
+      @include phone-landscape-mini {
+        font-size: 4rem;
+        right: 75px;
+        top: 5px;
+      }
+      @include tablet-portrait {
+        font-size: 6rem;
+        right: 75px;
+        top: 25px;
+      }
+      @include tablet-portrait-mini {
+        font-size: 5rem;
+        right: 60px;
+        top: 25px;
+      }
+      @include tablet-landscape {
+        font-size: 6rem;
+        right: 75px;
+        top: 25px;
+      }
+      @include desktop {
+        font-size: 6rem;
+        right: 75px;
+        top: 25px;
+      }
     }
     .card-heading {
       z-index: 6;
       position: absolute;
       color: #fff;
-      font-size: 3rem;
+      font-size: 1.2rem;
       text-transform: uppercase;
       font-weight: 700;
       font-family: 'Montserrat', sans-serif;
-      margin-top: 75px;
+      margin-top: 65px;
+      @include phone-portrait {
+        font-size: 1.5rem;
+        margin-top: 75px;
+      }
+      @include phone-portrait-mini {
+        font-size: 1rem;
+        margin-top: 65px;
+      }
+      @include phone-landscape {
+        font-size: 3rem;
+        margin-top: 55px;
+      }
+      @include phone-landscape-mini {
+        font-size: 2rem;
+        margin-top: 35px;
+      }
+      @include tablet-portrait {
+        font-size: 3rem;
+        margin-top: 75px;
+      }
+      @include tablet-portrait-mini {
+        font-size: 2rem;
+        margin-top: 70px;
+      }
+      @include tablet-landscape {
+        font-size: 3rem;
+        margin-top: 75px;
+      }
+      @include desktop {
+        font-size: 3rem;
+        margin-top: 75px;
+      }
     }
     .card-body {
       z-index: 6;
       position: relative;
-      margin: 125px 0 30px 0;
+      margin: 90px 0 30px 0;
       width: 90%;
+      @include phone-portrait {
+        margin-top: 100px;
+      }
+      @include phone-portrait-mini {
+        margin-top: 80px;
+      }
+      @include phone-landscape {
+        margin-top: 100px;
+      }
+      @include phone-landscape-mini {
+        margin-top: 60px;
+      }
+      @include tablet-portrait {
+        margin-top: 125px;
+      }
+      @include tablet-portrait-mini {
+        margin-top: 100px;
+      }
+      @include tablet-landscape {
+        margin-top: 125px;
+      }
+      @include desktop {
+        margin-top: 125px;
+      }
       .card-description {
         text-align: justify;
         font-size: 1rem;
@@ -1905,15 +2169,19 @@ body {
       }
       .card-technologies {
         display: flex;
+        flex-wrap: wrap;
         margin: 0 -5px;
         .card-techno {
-          margin: 0 5px;
-          padding: 0 7px 2px 7px;
+          margin: 5px;
+          padding: 1px 7px 2px 7px;
           border-radius: 5px;
           font-size: 0.8rem;
           font-family: 'Montserrat', sans-serif;
           font-weight: 400;
           color: #232524;
+          @include phone-landscape-mini {
+            margin: 0 5px;
+          }
         }
         .sky {
           background-color: $sky;
@@ -1943,12 +2211,31 @@ body {
       .card-actions {
         margin: 20px -10px 0 -10px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        @include phone-landscape {
+          flex-direction: row;
+        }
+        @include phone-landscape-mini {
+          margin-top: 12px;
+        }
+        @include tablet-portrait {
+          flex-direction: row;
+        }
+        @include tablet-portrait-mini {
+          flex-direction: row;
+        }
+        @include tablet-landscape {
+          flex-direction: row;
+        }
+        @include desktop {
+          flex-direction: row;
+        }
         .card-action {
           display: flex;
           align-items: center;
           padding: 10px 20px;
-          margin: 0 5px;
+          margin: 5px;
           border-radius: 25px;
           color: #fff;
           text-decoration: none;
@@ -1956,6 +2243,9 @@ body {
           position: relative;
           overflow: hidden;
           z-index: 1;
+          @include phone-landscape-mini {
+            margin: 0 5px;
+          }
           &:after {
             content: '';
             position: absolute;
@@ -1992,6 +2282,9 @@ body {
             text-transform: uppercase;
             font-size: 15px;
             font-weight: 600;
+            @include phone-portrait-mini {
+              font-size: 12px;
+            }
           }
         }
         .site {

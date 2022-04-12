@@ -77,7 +77,12 @@ body {
     font-size: 4em;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .swiper-slide h1 {
+    font-size: 4em;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .swiper-slide h1 {
     font-size: 3em;
   }
@@ -167,7 +172,7 @@ body {
   margin: 0 10px;
   font-family: "Lato", sans-serif;
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .btn {
     padding: 10px 25px;
     margin: 0 25px;
@@ -199,7 +204,15 @@ body {
     -webkit-justify-content: center;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 {
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 {
     justify-content: center;
     -webkit-box-pack: center;
@@ -241,7 +254,14 @@ body {
     margin-top: 5%;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 #container-logo {
+    height: 200px;
+    width: 200px;
+    margin-top: 5%;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 #container-logo {
     height: 250px;
     width: 250px;
@@ -309,7 +329,18 @@ body {
     font-size: 0.7em;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 #identite h1 {
+    margin-top: 5%;
+  }
+  .slide1 #identite h1 #prenom {
+    font-size: 1em;
+  }
+  .slide1 #identite h1 #nom {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 #identite h1 {
     margin-top: 0.5%;
     margin-bottom: 0;
@@ -376,7 +407,14 @@ body {
     font-size: 45px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 .slide-main #fonctions-container {
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 .slide-main #fonctions-container {
     display: flex;
     flex-direction: row;
@@ -425,7 +463,13 @@ body {
     height: 60px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 .slide-main #fonctions-container #fonctions {
+    margin-top: 0;
+    height: 60px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 .slide-main #fonctions-container #fonctions {
     margin-top: 0;
     height: 45px;
@@ -469,7 +513,12 @@ body {
     animation: moveTabletPortrait 5s infinite 1s;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 .slide-main #fonctions-container #fonctions span {
+    animation: moveTabletPortrait 5s infinite 1s;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 .slide-main #fonctions-container #fonctions span {
     display: inline-block;
     animation: moveTabletLandscape 5s infinite 1s;
@@ -667,7 +716,28 @@ body {
     display: inline-block;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 .slide-main #technos-container {
+    margin: 0 0 25px 0;
+    flex-direction: row;
+    font-size: 25px;
+  }
+  .slide1 .slide-main #technos-container .techno-item {
+    display: flex;
+    align-items: center;
+  }
+  .slide1 .slide-main #technos-container .techno-item .ion-icon, .slide1 .slide-main #technos-container .techno-item .mdi {
+    margin: 0 3px 0 0;
+  }
+  .slide1 .slide-main #technos-container .techno-item .bullet {
+    margin: 0 5px;
+    display: inline-block;
+  }
+  .slide1 .slide-main #technos-container .techno-item:last-child {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 .slide-main #technos-container {
     margin: 10px 0;
     flex-direction: row;
@@ -733,7 +803,12 @@ body {
     margin: 0 25px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 .slide-main #res-soc-container .reseau-social {
+    margin: 0 25px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 .slide-main #res-soc-container .reseau-social {
     margin: 0 30px;
   }
@@ -778,7 +853,12 @@ body {
     display: none;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 .slide-main #res-soc-container .reseau-social .middle {
+    display: none;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 .slide-main #res-soc-container .reseau-social .middle {
     display: none;
   }
@@ -824,7 +904,14 @@ body {
     height: 1.4em;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 .slide-main #res-soc-container .reseau-social .large {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 .slide-main #res-soc-container .reseau-social .large {
     display: inline-block;
     width: 1em;
@@ -878,7 +965,13 @@ body {
     height: 5.2em;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide1 .slide-main #res-soc-container .reseau-social .hexagone {
+    width: 2.5em;
+    height: 4.5em;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide1 .slide-main #res-soc-container .reseau-social .hexagone {
     width: 2em;
     height: 3.6em;
@@ -944,7 +1037,12 @@ body {
     font-size: 19px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide2 .slide-main #description p {
+    font-size: 19px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #description p {
     font-size: 19px;
   }
@@ -997,7 +1095,15 @@ body {
     row-gap: 10px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide2 .slide-main #technologies-mobile {
+    margin: 0 10%;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 10px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #technologies-mobile {
     margin: 1.5% 10%;
     grid-template-columns: repeat(6, 1fr);
@@ -1065,7 +1171,13 @@ body {
     height: 6.2em;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide2 .slide-main #technologies-mobile .hexagone {
+    width: 3em;
+    height: 4.5em;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #technologies-mobile .hexagone {
     width: 4em;
     height: 6.2em;
@@ -1106,7 +1218,13 @@ body {
     margin-top: 7.5px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide2 .slide-main #technologies-mobile .hexagone .badge .mdi {
+    font-size: 20px;
+    margin-top: 5px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #technologies-mobile .hexagone .badge .mdi {
     font-size: 30px;
     margin-top: 7.5px;
@@ -1117,7 +1235,12 @@ body {
     display: none;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide2 .slide-main #technologies-mobile .hexagone .badge .middle {
+    margin-top: 5px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #technologies-mobile .hexagone .badge .middle {
     display: none;
   }
@@ -1131,7 +1254,7 @@ body {
     margin-top: 5px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #technologies-mobile .hexagone .badge .large {
     display: block;
     margin-top: 5px;
@@ -1161,7 +1284,13 @@ body {
     height: 60px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide2 .slide-main #technologies-mobile .hexagone .badge {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #technologies-mobile .hexagone .badge {
     width: 60px;
     height: 60px;
@@ -1226,7 +1355,17 @@ body {
     font-size: 12px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide2 .slide-main #technologies-mobile .hexagone .ribbon {
+    width: 110px;
+    height: 13px;
+    left: 55%;
+    bottom: 10px;
+    margin-left: -57px;
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #technologies-mobile .hexagone .ribbon {
     width: 120px;
     height: 17px;
@@ -1307,7 +1446,7 @@ body {
     padding: 4px 15px 8px 15px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #cv #btn-cv {
     flex-direction: row;
     justify-content: center;
@@ -1333,7 +1472,7 @@ body {
     margin-right: 10px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #cv #btn-cv #button-icon {
     margin-right: 10px;
   }
@@ -1350,7 +1489,7 @@ body {
     font-size: 19px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #cv #btn-cv #button-text #cv-text {
     font-size: 19px;
   }
@@ -1370,7 +1509,7 @@ body {
     font-size: 17px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide2 .slide-main #cv #btn-cv #button-text {
     font-size: 17px;
   }
@@ -1417,7 +1556,12 @@ body {
     margin-top: calc((10rem * 0.288) * -1 + 0.5rem);
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row {
+    margin-top: calc((10rem * 0.288) * -1 + 0.5rem);
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row {
     margin-top: calc((9rem * 0.288) * -1 + 0.5rem);
   }
@@ -1472,7 +1616,13 @@ body {
     line-height: 24px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-btn {
+    font-size: 25px;
+    line-height: 24px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-btn {
     font-size: 25px;
     line-height: 24px;
@@ -1687,7 +1837,42 @@ body {
     border-top: 2.88rem solid #ffb300;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-yellow {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-yellow div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #ffb300;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-yellow div:before, .slide3 .project-row .project-yellow div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-yellow div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #ffb300;
+  }
+  .slide3 .project-row .project-yellow div:after {
+    top: 100%;
+    border-top: 2.592rem solid #ffb300;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-yellow {
     cursor: pointer;
   }
@@ -1976,7 +2161,42 @@ body {
     border-top: 2.88rem solid #f68401;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-orange {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-orange div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #f68401;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-orange div:before, .slide3 .project-row .project-orange div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-orange div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #f68401;
+  }
+  .slide3 .project-row .project-orange div:after {
+    top: 100%;
+    border-top: 2.592rem solid #f68401;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-orange {
     cursor: pointer;
   }
@@ -2264,7 +2484,42 @@ body {
     border-top: 2.88rem solid #dc306f;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-pink {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-pink div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #dc306f;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-pink div:before, .slide3 .project-row .project-pink div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-pink div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #dc306f;
+  }
+  .slide3 .project-row .project-pink div:after {
+    top: 100%;
+    border-top: 2.592rem solid #dc306f;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-pink {
     cursor: pointer;
   }
@@ -2552,7 +2807,42 @@ body {
     border-top: 2.88rem solid #c62828;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-red {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-red div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #c62828;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-red div:before, .slide3 .project-row .project-red div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-red div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #c62828;
+  }
+  .slide3 .project-row .project-red div:after {
+    top: 100%;
+    border-top: 2.592rem solid #c62828;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-red {
     cursor: pointer;
   }
@@ -2841,7 +3131,42 @@ body {
     border-top: 2.88rem solid #7127a8;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-purple {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-purple div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #7127a8;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-purple div:before, .slide3 .project-row .project-purple div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-purple div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #7127a8;
+  }
+  .slide3 .project-row .project-purple div:after {
+    top: 100%;
+    border-top: 2.592rem solid #7127a8;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-purple {
     cursor: pointer;
   }
@@ -3130,7 +3455,42 @@ body {
     border-top: 2.88rem solid #34a297;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-teal {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-teal div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #34a297;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-teal div:before, .slide3 .project-row .project-teal div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-teal div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #34a297;
+  }
+  .slide3 .project-row .project-teal div:after {
+    top: 100%;
+    border-top: 2.592rem solid #34a297;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-teal {
     cursor: pointer;
   }
@@ -3419,7 +3779,42 @@ body {
     border-top: 2.88rem solid #259af3;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-blue {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-blue div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #259af3;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-blue div:before, .slide3 .project-row .project-blue div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-blue div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #259af3;
+  }
+  .slide3 .project-row .project-blue div:after {
+    top: 100%;
+    border-top: 2.592rem solid #259af3;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-blue {
     cursor: pointer;
   }
@@ -3708,7 +4103,42 @@ body {
     border-top: 2.88rem solid #7cb342;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-apple {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-apple div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #7cb342;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-apple div:before, .slide3 .project-row .project-apple div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-apple div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #7cb342;
+  }
+  .slide3 .project-row .project-apple div:after {
+    top: 100%;
+    border-top: 2.592rem solid #7cb342;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-apple {
     cursor: pointer;
   }
@@ -3997,7 +4427,42 @@ body {
     border-top: 2.88rem solid #00944a;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-green {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-green div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #00944a;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-green div:before, .slide3 .project-row .project-green div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-green div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #00944a;
+  }
+  .slide3 .project-row .project-green div:after {
+    top: 100%;
+    border-top: 2.592rem solid #00944a;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-green {
     cursor: pointer;
   }
@@ -4286,7 +4751,42 @@ body {
     border-top: 2.88rem solid #9e9e9e;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide3 .project-row .project-silver {
+    cursor: pointer;
+  }
+  .slide3 .project-row .project-silver div {
+    width: 9rem;
+    height: 5.193rem;
+    background: #9e9e9e;
+    margin: 2.7rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  .slide3 .project-row .project-silver div:before, .slide3 .project-row .project-silver div:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    border-left: 4.5rem solid transparent;
+    border-right: 4.5rem solid transparent;
+  }
+  .slide3 .project-row .project-silver div:before {
+    bottom: 100%;
+    border-bottom: 2.592rem solid #9e9e9e;
+  }
+  .slide3 .project-row .project-silver div:after {
+    top: 100%;
+    border-top: 2.592rem solid #9e9e9e;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide3 .project-row .project-silver {
     cursor: pointer;
   }
@@ -4404,7 +4904,14 @@ body {
     margin: 25px 0 15px 0;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide4 h1 #contact_icon {
+    height: 200px;
+    width: 200px;
+    margin: 25px 0 15px 0;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide4 h1 #contact_icon {
     height: 200px;
     width: 200px;
@@ -4439,7 +4946,7 @@ body {
     margin-top: -15px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide4 .slide-main #infos-container {
     margin-top: -25px;
   }
@@ -4461,7 +4968,12 @@ body {
     font-size: 35px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide4 .slide-main #infos-container .info {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide4 .slide-main #infos-container .info {
     font-size: 35px;
   }
@@ -4479,7 +4991,12 @@ body {
     font-size: 75px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide4 .slide-main #infos-container .info .icon {
+    font-size: 75px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide4 .slide-main #infos-container .info .icon {
     font-size: 75px;
   }
@@ -4500,7 +5017,13 @@ body {
     margin-bottom: 50px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide4 .slide-main #infos-container .info:last-child {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide4 .slide-main #infos-container .info:last-child {
     margin-bottom: 75px;
   }
@@ -4542,7 +5065,13 @@ body {
     padding: 2px 25px 8px 25px;
   }
 }
-@media only screen and (min-width: 1000px) and (orientation: landscape) {
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .slide4 .slide-main #contact #btn-contact {
+    font-size: 35px;
+    padding: 2px 25px 8px 25px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
   .slide4 .slide-main #contact #btn-contact {
     font-size: 30px;
   }
@@ -4593,10 +5122,11 @@ body {
 .modal .modal-card {
   z-index: 3;
   position: relative;
-  width: 800px;
+  max-width: 800px;
+  max-height: 90vh;
   display: flex;
   top: -100%;
-  margin-top: 3px;
+  margin: 0 25px;
   flex-direction: column;
   justify-content: start;
   align-items: center;
@@ -4607,17 +5137,29 @@ body {
   overflow: hidden;
   transition: all 5s ease;
 }
+@media only screen and (min-width: 1200px) {
+  .modal .modal-card {
+    max-height: 100vh;
+    margin: 0;
+  }
+}
 .modal .modal-card .card-badge {
   z-index: 4;
   position: absolute;
-  top: -2px;
-  left: -70px;
+  top: -3px;
+  left: -71px;
   height: 50px;
   background: #58C777;
   width: 200px;
   text-align: center;
   transform: rotate(-45deg);
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.34);
+}
+@media only screen and (min-width: 1200px) {
+  .modal .modal-card .card-badge {
+    top: -2px;
+    left: -70px;
+  }
 }
 .modal .modal-card .card-badge:after {
   position: absolute;
@@ -4688,29 +5230,172 @@ body {
 .modal .modal-card .card-design {
   z-index: 5;
   position: absolute;
-  top: 25px;
-  right: 75px;
+  top: 35px;
+  right: -15px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.1);
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: 900;
   font-family: "Montserrat", sans-serif;
+}
+@media only screen and (max-width: 425px) and (min-height: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-design {
+    font-size: 4rem;
+    right: -15px;
+  }
+}
+@media only screen and (max-width: 300px) and (min-height: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-design {
+    font-size: 3rem;
+    right: -15px;
+    top: 35px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
+  .modal .modal-card .card-design {
+    font-size: 6rem;
+    right: 75px;
+    top: 10px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
+  .modal .modal-card .card-design {
+    font-size: 4rem;
+    right: 75px;
+    top: 5px;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .modal .modal-card .card-design {
+    font-size: 6rem;
+    right: 75px;
+    top: 25px;
+  }
+}
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-design {
+    font-size: 5rem;
+    right: 60px;
+    top: 25px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
+  .modal .modal-card .card-design {
+    font-size: 6rem;
+    right: 75px;
+    top: 25px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .modal .modal-card .card-design {
+    font-size: 6rem;
+    right: 75px;
+    top: 25px;
+  }
 }
 .modal .modal-card .card-heading {
   z-index: 6;
   position: absolute;
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
-  margin-top: 75px;
+  margin-top: 65px;
+}
+@media only screen and (max-width: 425px) and (min-height: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-heading {
+    font-size: 1.5rem;
+    margin-top: 75px;
+  }
+}
+@media only screen and (max-width: 300px) and (min-height: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-heading {
+    font-size: 1rem;
+    margin-top: 65px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
+  .modal .modal-card .card-heading {
+    font-size: 3rem;
+    margin-top: 55px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
+  .modal .modal-card .card-heading {
+    font-size: 2rem;
+    margin-top: 35px;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .modal .modal-card .card-heading {
+    font-size: 3rem;
+    margin-top: 75px;
+  }
+}
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-heading {
+    font-size: 2rem;
+    margin-top: 70px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
+  .modal .modal-card .card-heading {
+    font-size: 3rem;
+    margin-top: 75px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .modal .modal-card .card-heading {
+    font-size: 3rem;
+    margin-top: 75px;
+  }
 }
 .modal .modal-card .card-body {
   z-index: 6;
   position: relative;
-  margin: 125px 0 30px 0;
+  margin: 90px 0 30px 0;
   width: 90%;
+}
+@media only screen and (max-width: 425px) and (min-height: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-body {
+    margin-top: 100px;
+  }
+}
+@media only screen and (max-width: 300px) and (min-height: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-body {
+    margin-top: 80px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
+  .modal .modal-card .card-body {
+    margin-top: 100px;
+  }
+}
+@media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
+  .modal .modal-card .card-body {
+    margin-top: 60px;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .modal .modal-card .card-body {
+    margin-top: 125px;
+  }
+}
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-body {
+    margin-top: 100px;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
+  .modal .modal-card .card-body {
+    margin-top: 125px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .modal .modal-card .card-body {
+    margin-top: 125px;
+  }
 }
 .modal .modal-card .card-body .card-description {
   text-align: justify;
@@ -4719,16 +5404,22 @@ body {
 }
 .modal .modal-card .card-body .card-technologies {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 -5px;
 }
 .modal .modal-card .card-body .card-technologies .card-techno {
-  margin: 0 5px;
-  padding: 0 7px 2px 7px;
+  margin: 5px;
+  padding: 1px 7px 2px 7px;
   border-radius: 5px;
   font-size: 0.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #232524;
+}
+@media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
+  .modal .modal-card .card-body .card-technologies .card-techno {
+    margin: 0 5px;
+  }
 }
 .modal .modal-card .card-body .card-technologies .sky {
   background-color: #61DAFB;
@@ -4752,18 +5443,49 @@ body {
   background-color: #bc76e8;
 }
 .modal .modal-card .card-body .card-technologies .red {
-  background-color: #e82f29;
+  background-color: #ec4843;
 }
 .modal .modal-card .card-body .card-actions {
   margin: 20px -10px 0 -10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+@media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
+  .modal .modal-card .card-body .card-actions {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
+  .modal .modal-card .card-body .card-actions {
+    margin-top: 12px;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .modal .modal-card .card-body .card-actions {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-body .card-actions {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 960px) and (orientation: landscape) {
+  .modal .modal-card .card-body .card-actions {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .modal .modal-card .card-body .card-actions {
+    flex-direction: row;
+  }
 }
 .modal .modal-card .card-body .card-actions .card-action {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  margin: 0 5px;
+  margin: 5px;
   border-radius: 25px;
   color: #fff;
   text-decoration: none;
@@ -4771,6 +5493,11 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+@media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {
+  .modal .modal-card .card-body .card-actions .card-action {
+    margin: 0 5px;
+  }
 }
 .modal .modal-card .card-body .card-actions .card-action:after {
   content: "";
@@ -4808,6 +5535,11 @@ body {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 600;
+}
+@media only screen and (max-width: 300px) and (min-height: 600px) and (orientation: portrait) {
+  .modal .modal-card .card-body .card-actions .card-action .action-text {
+    font-size: 12px;
+  }
 }
 .modal .modal-card .card-body .card-actions .site:after {
   background-color: #75d4da;
