@@ -1941,7 +1941,7 @@ body {
   .modal-card {
     z-index: 3;
     position: relative;
-    max-width: 800px;
+    width: 800px;
     max-height: 90vh;
     display: flex;
     top: -100%;
@@ -1956,13 +1956,14 @@ body {
     overflow: hidden;
     transition: all 5s ease;
     @include desktop {
+      width: 800px;
       max-height: 100vh;
       margin: 0;
     }
     .card-badge {
       z-index: 4;
       position: absolute;
-      top: -3px;
+      top: -4px;
       left: -71px;
       height: 50px;
       background: #58C777;
@@ -1971,8 +1972,8 @@ body {
       transform: rotate(-45deg);
       box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.34);
       @include desktop {
-        top: -2px;
-        left: -70px;
+        top: -3px;
+        left: -71px;
       }
       &:after {
         position: absolute;
@@ -2062,7 +2063,7 @@ body {
       }
       @include phone-landscape {
         font-size: 6rem;
-        right: 75px;
+        right: 55px;
         top: 10px;
       }
       @include phone-landscape-mini {
@@ -2110,7 +2111,7 @@ body {
       }
       @include phone-landscape {
         font-size: 3rem;
-        margin-top: 55px;
+        margin-top: 57px;
       }
       @include phone-landscape-mini {
         font-size: 2rem;

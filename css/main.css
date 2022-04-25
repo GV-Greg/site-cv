@@ -5122,7 +5122,7 @@ body {
 .modal .modal-card {
   z-index: 3;
   position: relative;
-  max-width: 800px;
+  width: 800px;
   max-height: 90vh;
   display: flex;
   top: -100%;
@@ -5139,6 +5139,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .modal .modal-card {
+    width: 800px;
     max-height: 100vh;
     margin: 0;
   }
@@ -5146,7 +5147,7 @@ body {
 .modal .modal-card .card-badge {
   z-index: 4;
   position: absolute;
-  top: -3px;
+  top: -4px;
   left: -71px;
   height: 50px;
   background: #58C777;
@@ -5157,8 +5158,8 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .modal .modal-card .card-badge {
-    top: -2px;
-    left: -70px;
+    top: -3px;
+    left: -71px;
   }
 }
 .modal .modal-card .card-badge:after {
@@ -5254,7 +5255,7 @@ body {
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .modal .modal-card .card-design {
     font-size: 6rem;
-    right: 75px;
+    right: 55px;
     top: 10px;
   }
 }
@@ -5318,7 +5319,7 @@ body {
 @media only screen and (min-width: 350px) and (max-height: 425px) and (orientation: landscape) {
   .modal .modal-card .card-heading {
     font-size: 3rem;
-    margin-top: 55px;
+    margin-top: 57px;
   }
 }
 @media only screen and (min-width: 350px) and (max-height: 300px) and (orientation: landscape) {

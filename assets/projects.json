@@ -21,32 +21,19 @@
     }
   },
   "karaocube" : {
-    "description" : "Petit projet en laravel qui peut servir pour une personne qui anime des karaokés. Le principe est que les personnes participantes à la soirée puisse recherche une chanson et l'envoyer à l'animateur avec leur prénom (et s'il en trouve pas de pouvoir entrer le titre d'une chanson. L'animateur a accès à un dashboard (partie anim) où il voit les demandes.",
+    "description" : "Projet en laravel en démo réalisé en 2-3 jours qui peut servir à une personne qui anime des karaokés. Principe du projet : les personnes participantes à la soirée recherchent une chanson et l'envoient à l'animateur avec leur prénom (et s'ils ne trouvent pas, ils entrer le titre de la chanson). L'animateur a accès à un dashboard (partie admin) où il voit les demandes.",
     "statut" : "DEMO",
     "technologies" : {
       "laravel 8": "red",
-      "alpinejs": "sky",
       "tailwindCss": "blue"
     },
     "actions" : {
+      "site": "https://www.karao.creacube.be/",
       "github" : "https://github.com/GV-Greg/KaraoCube"
     }
   },
-  "rk modules" : {
-    "description" : "Projet de test pour la création de de la base de modules devant être intégrés au projet 'Office des coffres' afin de les faire tester avant leur implémentation.",
-    "statut" : "DEV",
-    "technologies" : {
-      "vuejs 3": "green",
-      "vite" : "violet",
-      "vue-sweetalert": "purple"
-    },
-    "actions" : {
-      "site" : "https://gv-greg.github.io/RK-Modules/",
-      "github" : "https://gv-greg.github.io/RK-Modules/"
-    }
-  },
   "office des coffres" : {
-    "description" : "Projet personnel afin de créer des modules d'aide pour le jeu 'Renaissance Kingdoms' - jeu de rôle médiéval sur navigateur. Le backend est une api laravel avec un dashboard admin tandis que le front se décline en une app vuejs (en prod) et une app en react pour l'apprentissage de celui-ci (juste en dev).",
+    "description" : "Projet personnel en cours de développement afin de créer des modules d'aide pour le jeu 'Renaissance Kingdoms' - jeu de rôle médiéval sur navigateur. Le backend est une api laravel avec un dashboard admin tandis que le front se décline en une app vuejs (en prod) et une app en react pour l'apprentissage de celui-ci (juste en dev).",
     "statut" : "DEV",
     "technologies" : {
       "laravel 8": "red",
@@ -58,6 +45,19 @@
     "actions" : {
       "github front react" : "https://github.com/GV-Greg/office-des-coffres-front",
       "github back" : "https://github.com/GV-Greg/Office-des-Coffres-back"
+    }
+  },
+  "rk modules" : {
+    "description" : "Projet en cours de développement servant de tests pour la création de la base de modules devant être intégrés au projet 'Office des coffres' afin de les faire tester avant leur implémentation.",
+    "statut" : "DEV",
+    "technologies" : {
+      "vuejs 3": "green",
+      "vite" : "violet",
+      "vue-sweetalert": "purple"
+    },
+    "actions" : {
+      "site" : "https://gv-greg.github.io/RK-Modules/",
+      "github" : "https://gv-greg.github.io/RK-Modules/"
     }
   }
 }
