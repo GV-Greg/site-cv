@@ -1,6 +1,6 @@
 {
   "formacube" : {
-    "description" : "Projet d'ERP de management d'une structure donnant des formations, réalisé comme Travail de Fin d'Études de mon Brevet (BES) de développeur web. Il y a deux versions, la première (gitlab) est le repo du TFE en lui-même, datant de 2020 et la deuxième (github) est le repo du projet retravaillé dont notamment la démo en ligne. C'est assurément le plus gros projet que j'ai pu développer jusqu'à présent.",
+    "description" : "Projet d'ERP de management d'une structure donnant des formations, réalisé comme Travail de Fin d'Études de mon Brevet (BES) de développeur web. Il y a deux versions, la première (gitlab) est le repo du TFE en lui-même, datant de 2020 et la deuxième (github) est le repo du projet retravaillé dont notamment la démo en ligne.",
     "statut" : "DEMO",
     "technologies": {
       "Laravel 8": "red",
