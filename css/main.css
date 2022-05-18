@@ -5410,8 +5410,8 @@ body {
 }
 .modal .modal-card .card-body .card-technologies .card-techno {
   margin: 5px;
-  padding: 1px 7px 2px 7px;
-  border-radius: 5px;
+  padding: 1px 10px 2px 10px;
+  border-radius: 6px;
   font-size: 0.8rem;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -5431,6 +5431,13 @@ body {
 .modal .modal-card .card-body .card-technologies .green {
   background-color: #4bd598;
 }
+.modal .modal-card .card-body .card-technologies .purple {
+  background-color: #563D7C;
+  color: #fff;
+}
+.modal .modal-card .card-body .card-technologies .lavender {
+  background-color: #bc76e8;
+}
 .modal .modal-card .card-body .card-technologies .violet {
   background-color: #a834da;
 }
@@ -5439,9 +5446,6 @@ body {
 }
 .modal .modal-card .card-body .card-technologies .yellow {
   background-color: #e3cd1b;
-}
-.modal .modal-card .card-body .card-technologies .purple {
-  background-color: #bc76e8;
 }
 .modal .modal-card .card-body .card-technologies .red {
   background-color: #ec4843;
@@ -5548,10 +5552,10 @@ body {
 .modal .modal-card .card-body .card-actions .site:before {
   background-color: #39c1ca;
 }
-.modal .modal-card .card-body .card-actions .github:after {
+.modal .modal-card .card-body .card-actions .github:after, .modal .modal-card .card-body .card-actions .gitlab:after {
   background-color: #75dab0;
 }
-.modal .modal-card .card-body .card-actions .github:before {
+.modal .modal-card .card-body .card-actions .github:before, .modal .modal-card .card-body .card-actions .gitlab:before {
   background-color: #39ca82;
 }
 

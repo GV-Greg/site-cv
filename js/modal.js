@@ -50,6 +50,9 @@ function openModal(project) {
             if(tab.includes('github')) {
                 tag.classList.add('github');
                 tag.innerHTML = '<ion-icon name="logo-github"></ion-icon>' + '<span class="action-text">' + action + '</span>';
+            } else if(tab.includes('gitlab')) {
+                tag.classList.add('gitlab');
+                tag.innerHTML = '<ion-icon name="logo-gitlab"></ion-icon>' + '<span class="action-text">' + action + '</span>';
             } else if(tab.includes('site')) {
                 tag.classList.add('site');
                 tag.innerHTML = '<ion-icon name="home"></ion-icon>' + '<span class="action-text">' + action + '</span>';
