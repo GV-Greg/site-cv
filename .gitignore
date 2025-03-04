@@ -1,2 +1,13 @@
+# Logs
+*.log
 
-.idea/vcs.xml
+# Editor directories and files
+.vscode/*
+.codegpt/
+.idea/
+!.vscode/extensions.json
+
+# Environment files
+.env
+.env.*
+!.env.example

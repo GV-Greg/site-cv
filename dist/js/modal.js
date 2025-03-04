@@ -2,7 +2,7 @@ let data = [];
 function loadFile() {
     let xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', '/../assets/projects.json', true);
+    xobj.open('GET', 'assets/projects.json', true);
     xobj.onload = () => {
         try {
             if(xobj.status === 200) {
